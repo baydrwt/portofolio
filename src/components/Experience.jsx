@@ -1,7 +1,5 @@
 import { Environment, Float, OrbitControls } from "@react-three/drei";
 import { Jet } from "./Jet";
-import gsap from "gsap";
-import { useGSAP } from "@gsap/react";
 
 export const Experience = () => {
   return (

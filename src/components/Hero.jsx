@@ -8,7 +8,7 @@ export default function Hero() {
       <p>Bayu Darwanto</p>
       <p>Introduction</p>
       <h1>Web Developer</h1>
-      <div className="canvas absolute z-50">
+      <div className="canvas absolute z-10">
         <Canvas shadows camera={{ position: [3, 2, 8], fov: 30 }}>
           <Experience />
         </Canvas>
