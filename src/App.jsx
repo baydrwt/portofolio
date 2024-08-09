@@ -1,17 +1,13 @@
-import { ScrollControls } from "@react-three/drei";
-import { Canvas } from "@react-three/fiber";
-import { Experience } from "./components/Experience";
+import react from "react";
+import Header from "./components/Header";
+import Hero from "./components/Hero";
 
 function App() {
   return (
-    <>
-      <Canvas shadows camera={{ position: [3, 4, 6], fov: 30 }}>
-        <color attach="background" args={["#ececec"]} />
-        <ScrollControls pages={3}>
-          <Experience />
-        </ScrollControls>
-      </Canvas>
-    </>
+    <div className="content px-28">
+      <Header />
+      <Hero />
+    </div>
   );
 }
 

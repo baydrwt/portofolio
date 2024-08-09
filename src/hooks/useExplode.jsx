@@ -31,52 +31,14 @@ export const useExplode = (group, { distance = 3, enableRotation = true }) => {
 
   useFrame(() => {
     group.current.children.forEach((mesh) => {
-      if (scrollData.offset < 0.0001) {
-        if (mesh.name === "origin") {
-          mesh.visible = true;
-        } else {
-          mesh.visible = false;
-        }
-      } else {
-        if (mesh.name === "origin") {
-          mesh.visible = false;
-        } else {
-          mesh.visible = true;
-        }
-      }
-
-      mesh.position.x = THREE.MathUtils.lerp(
-        mesh.originalPosition.x,
-        mesh.targetPosition.x,
-        scrollData.offset // 0 at the beginning and 1 after scroll
-      );
-      mesh.position.y = THREE.MathUtils.lerp(
-        mesh.originalPosition.y,
-        mesh.targetPosition.y,
-        scrollData.offset // 0 at the beginning and 1 after scroll
-      );
-      mesh.position.z = THREE.MathUtils.lerp(
-        mesh.originalPosition.z,
-        mesh.targetPosition.z,
-        scrollData.offset // 0 at the beginning and 1 after scroll
-      );
+      mesh.position.x = THREE.MathUtils.lerp(mesh.originalPosition.x, mesh.targetPosition.x, scrollData.offset);
+      mesh.position.y = THREE.MathUtils.lerp(mesh.originalPosition.y, mesh.targetPosition.y, scrollData.offset);
+      mesh.position.z = THREE.MathUtils.lerp(mesh.originalPosition.z, mesh.targetPosition.z, scrollData.offset);
 
       if (enableRotation) {
-        mesh.rotation.x = THREE.MathUtils.lerp(
-          mesh.originalRotation.x,
-          mesh.targetRotation.x,
-          scrollData.offset // 0 at the beginning and 1 after scroll
-        );
-        mesh.rotation.y = THREE.MathUtils.lerp(
-          mesh.originalRotation.y,
-          mesh.targetRotation.y,
-          scrollData.offset // 0 at the beginning and 1 after scroll
-        );
-        mesh.rotation.z = THREE.MathUtils.lerp(
-          mesh.originalRotation.z,
-          mesh.targetRotation.z,
-          scrollData.offset // 0 at the beginning and 1 after scroll
-        );
+        mesh.rotation.x = THREE.MathUtils.lerp(mesh.originalRotation.x, mesh.targetRotation.x, scrollData.offset);
+        mesh.rotation.y = THREE.MathUtils.lerp(mesh.originalRotation.y, mesh.targetRotation.y, scrollData.offset);
+        mesh.rotation.z = THREE.MathUtils.lerp(mesh.originalRotation.z, mesh.targetRotation.z, scrollData.offset);
       }
     });
   });

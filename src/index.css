@@ -1,8 +1,44 @@
-#root {
-  width: 100vw;
-  height: 100vh;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer components {
+  * {
+    @apply overflow-x-hidden;
+  }
 
-body {
-  margin: 0;
+  #root {
+    @apply relative;
+  }
+
+  .bg-transition {
+    @apply relative z-10;
+  }
+
+  .bg-transition::before {
+    @apply absolute inset-0 bg-slate-200 rounded-3xl opacity-0 transition-all duration-500 ease-in-out;
+    content: "";
+    z-index: -1;
+  }
+
+  .bg-transition:hover::before,
+  .bg-transition:focus::before,
+  .bg-transition:active::before {
+    @apply opacity-100 scale-100;
+  }
+
+  .bg-transition::before {
+    transform: scale(0.3);
+  }
+
+  .bg-transition:hover::before {
+    transform: scale(1);
+  }
+
+  canvas {
+    @apply h-screen w-screen;
+  }
+
+  .jet {
+    @apply absolute left-0 bottom-0;
+  }
 }
