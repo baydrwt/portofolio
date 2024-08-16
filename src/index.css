@@ -1,7 +1,7 @@
 @font-face {
   font-family: "soehne";
   font-style: normal;
-  font-weight: normal;
+  /* font-weight: normal; */
   src: url(./assets/fonts/TestSohneBreit-Dreiviertelfett-BF663d89c955618.otf) format("opentype");
 }
 
@@ -17,12 +17,17 @@
     @apply relative;
   }
 
+  /* Section 1 */
+  .hero {
+    background-image: linear-gradient(to bottom, #dfe9f3 0%, white 100%);
+  }
+
   .bg-transition {
     @apply relative z-10;
   }
 
   .bg-transition::before {
-    @apply absolute inset-0 bg-slate-200 rounded-3xl opacity-0 transition-all duration-500 ease-in-out;
+    @apply absolute inset-0 bg-slate-300 rounded-3xl opacity-0 transition-all duration-500 ease-in-out;
     content: "";
     z-index: -1;
   }
@@ -47,5 +52,42 @@
 
   .jet {
     @apply absolute left-0 bottom-0;
+  }
+
+  .btn-download {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.35s;
+  }
+
+  .btn-download:before,
+  .btn-download:after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    top: -100%;
+    left: 0;
+    background: black;
+    z-index: -1;
+    transition: all 0.35s;
+  }
+
+  .btn-download:before {
+    opacity: 0.5;
+  }
+
+  .btn-download:after {
+    transition-delay: 0.2s;
+  }
+
+  .btn-download:hover {
+    color: #fff;
+    content: "test";
+  }
+
+  .btn-download:hover:before,
+  .btn-download:hover:after {
+    top: 0;
   }
 }

@@ -4,10 +4,10 @@ import Hero from "./components/Hero";
 
 function App() {
   return (
-    <div className="content px-28">
+    <div className="content">
       <Header />
       <Hero />
-      <Hero />
+      {/* <Hero /> */}
     </div>
   );
 }
