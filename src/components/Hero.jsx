@@ -22,7 +22,7 @@ export default function Hero() {
         .fromTo(".concept", { y: 45, opacity: 0 }, { y: 0, opacity: 1, duration: 0.5 })
         .to(".concept", { x: 0, duration: 0.7 })
         .fromTo(".code", { x: -100 }, { x: 0, opacity: 1, duration: 1 })
-        .fromTo(".btn-download", { y: -70, scale: 0.5, zIndex: 0, opacity: 0 }, { y: 0, scale: 1, opacity: 1, zIndex: 30 });
+        .fromTo(".btn-download", { y: -70, scale: 0.5, zIndex: 0 }, { y: 0, scale: 1, opacity: 1, duration: 2, zIndex: 30 });
     },
     { scope: main }
   );
@@ -38,7 +38,7 @@ export default function Hero() {
           <Experience />
         </Canvas>
       </div>
-      <button type="button" className="btn-download flex items-center gap-5 bg-transparent mt-5 py-3 px-10 rounded-3xl text-black border-2 border-slate-950 font-soehne tracking-widest hover:cursor-pointer">
+      <button type="button" className="btn-download flex items-center gap-5 bg-transparent mt-5 py-3 px-10 rounded-3xl text-black border-2 border-slate-950 font-soehne tracking-widest opacity-0 hover:cursor-pointer">
         <FaCloudDownloadAlt className="text-3xl" /> Download Resume
       </button>
     </section>
