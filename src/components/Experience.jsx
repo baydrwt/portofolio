@@ -15,7 +15,7 @@ export const Experience = () => {
         start: "-50 center",
         end: "105% bottom",
         scrub: true,
-        markers: true,
+        // markers: true,
       },
     });
 
