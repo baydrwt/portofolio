@@ -26,6 +26,7 @@ export default function Hero() {
     },
     { scope: main }
   );
+
   return (
     <section className="hero w-screen h-screen flex flex-col justify-center items-center" ref={main}>
       <div className="text overflow-hidden flex">
@@ -33,7 +34,7 @@ export default function Hero() {
         <p className="code font-soehne text-2xl leading-normal z-0 pl-2">to {code}</p>
       </div>
       <h1 className="title font-soehne text-2xl leading-normal tracking-wider bg-transparent p-1 z-10 font-bold">BAYU DARWANTO as WEBSITE DEVELOPER</h1>
-      <div className="canvas absolute z-10">
+      <div className="canvas absolute z-20">
         <Canvas shadows camera={{ position: [3, 0, 8], fov: 30 }}>
           <Experience />
         </Canvas>
