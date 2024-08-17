@@ -27,6 +27,24 @@ export default function Hero() {
     { scope: main }
   );
 
+  useGSAP(() => {
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".batas",
+        start: "top bottom",
+        end: "top 52%",
+        scrub: true,
+        markers: true,
+      },
+    });
+    tl.to(".btn-download", { paddingLeft: 25, paddingRight: 25 })
+      .to(".btn-text", { y: -20, opacity: 0, display: "none" })
+      .to(".title", { y: 50, scale: 0.3, opacity: 0 })
+      .to(".text", { y: 80, opacity: 0, delay: 0.5 })
+      .to(".btn-download", { opacity: 0 })
+      .to(".btn-download", { position: "fixed", bottom: 50, opacity: 1 });
+  });
+
   return (
     <section className="hero w-screen h-screen flex flex-col justify-center items-center" ref={main}>
       <div className="text overflow-hidden flex">
@@ -40,7 +58,7 @@ export default function Hero() {
         </Canvas>
       </div>
       <button type="button" className="btn-download flex items-center gap-5 bg-transparent mt-5 py-3 px-10 rounded-3xl text-black border-2 border-slate-950 font-soehne tracking-widest opacity-0 hover:cursor-pointer">
-        <FaCloudDownloadAlt className="text-3xl" /> Download Resume
+        <FaCloudDownloadAlt className="text-3xl" /> <span className="btn-text">Download Resume</span>
       </button>
     </section>
   );
