@@ -22,7 +22,6 @@ export function Jet(props) {
   const currentOffsets = useRef({});
 
   useGSAP(() => {
-    console.log(group.current);
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: ".batas",

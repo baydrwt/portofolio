@@ -104,6 +104,13 @@
     top: 0;
   }
 
+  /* Section 2 */
+
+  .journey #mainPath:hover {
+    stroke: black !important;
+    cursor: default;
+  }
+
   .journey path:hover,
   circle:hover {
     stroke: red;

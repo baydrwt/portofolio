@@ -11,7 +11,7 @@ export const Experience = () => {
   useGSAP(() => {
     const tl = gsap.timeline({
       scrollTrigger: {
-        trigger: ".batas",
+      trigger: ".batas",
         start: "-50 center",
         end: "105% bottom",
         scrub: true,
