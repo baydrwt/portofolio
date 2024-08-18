@@ -19,7 +19,7 @@ export const Experience = () => {
       },
     });
 
-    tl.to(".canvas", { y: 150 }).to(".canvas", { y: 300 });
+    tl.to(".canvas", { y: 150, ease: "slow(0.5, 0.8, true)" }).to(".canvas", { y: 300, ease: "slow(0.5, 0.8, true)" });
   });
   return (
     <>

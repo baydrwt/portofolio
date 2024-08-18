@@ -12,12 +12,16 @@
     @apply overflow-x-hidden;
   }
 
+  html {
+    scroll-behavior: smooth !important;
+  }
+
   #root {
     @apply relative;
   }
 
   /* Section 1 */
-  .hero {
+  .content {
     background-image: linear-gradient(to bottom, #dfe9f3 0%, white 100%);
   }
 
@@ -56,7 +60,11 @@
   .btn-download {
     position: relative;
     overflow: hidden;
-    transition: all 0.35s;
+    transition: all 0.45s ease-in-out;
+  }
+
+  .btn-text {
+    transition: all 0.45s ease-out;
   }
 
   .btn-download:before,
@@ -69,7 +77,7 @@
     left: 0;
     background: black;
     z-index: -1;
-    transition: all 0.35s;
+    transition: all 0.45s ease-in-out;
   }
 
   .btn-download:before {
@@ -82,11 +90,23 @@
 
   .btn-download:hover {
     color: #fff;
-    content: "test";
+    padding: 12px 40px;
+  }
+
+  .btn-download:hover .btn-text {
+    display: block !important;
+    opacity: 1 !important;
+    transform: translateY(0px) !important;
   }
 
   .btn-download:hover:before,
   .btn-download:hover:after {
     top: 0;
+  }
+
+  .journey path:hover,
+  circle:hover {
+    stroke: red;
+    cursor: pointer;
   }
 }

@@ -33,22 +33,23 @@ export function Jet(props) {
       },
     });
 
-    tl.to(group.current.scale, { x: 0.06, y: 0.06, z: 0.06 })
+    tl.to(group.current.scale, { x: 0.06, y: 0.06, z: 0.06, ease: "slow(0.5, 0.8, true)" })
       .to(
         group.current.position,
         {
-          x: 2.8,
+          x: 3.1,
           y: -1.4,
           duration: 2,
+          ease: "slow(0.5, 0.8, true)",
         },
         "<"
       )
-
       .to(group.current.rotation, {
         y: -2.3,
         x: 0.6,
         z: 0.2,
         duration: 2,
+        ease: "slow(0.5, 0.8, true)",
       });
   });
 
