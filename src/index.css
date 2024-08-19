@@ -135,11 +135,11 @@
     position: relative;
   }
 
-
   .card {
     position: relative;
     /* background-color: hsla(0, 0%, 100%, 0.3); */
     background-color: #f0f0f0;
+    transition: all 0.45s ease-in-out;
   }
 
   .card:before {
