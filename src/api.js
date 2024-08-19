@@ -16,6 +16,7 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 const experienceCollectionRef = collection(db, "experience");
+const projectCollectionRef = collection(db, "projects");
 
 export async function getExperience() {
   const querySnapshot = await getDocs(experienceCollectionRef);
@@ -23,9 +24,8 @@ export async function getExperience() {
   return dataArr;
 }
 
-
 export async function getProject() {
-  const querySnapshot = await getDocs(experienceCollectionRef);
+  const querySnapshot = await getDocs(projectCollectionRef);
   const dataArr = querySnapshot.docs.map((doc) => ({ ...doc.data(), id: doc.id }));
   return dataArr;
 }
