@@ -1,11 +1,8 @@
 import React, { useEffect } from "react";
 import { RouterProvider, createBrowserRouter, createRoutesFromElements, Route } from "react-router-dom";
-import Index from "./pages/Index";
-import Journey from "./components/Journey";
-import ExperienceInfo from "./components/ExperienceInfo";
-import { loader as experienceLoader } from "./components/Journey";
+import Index, { loader as indexLoader } from "./pages/Index";
 
-const router = createBrowserRouter(createRoutesFromElements(<Route path="/" element={<Index />} loader={experienceLoader}></Route>));
+const router = createBrowserRouter(createRoutesFromElements(<Route path="/" element={<Index />} loader={indexLoader}></Route>));
 
 function App() {
   useEffect(() => {
@@ -13,7 +10,7 @@ function App() {
       event.preventDefault();
 
       const delta = Math.sign(event.deltaY);
-      const scrollAmount = 50;
+      const scrollAmount = 60;
 
       window.scrollBy({
         top: delta * scrollAmount,

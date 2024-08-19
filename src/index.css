@@ -4,6 +4,11 @@
   src: url(./assets/fonts/TestSohneBreit-Dreiviertelfett-BF663d89c955618.otf) format("opentype");
 }
 
+@font-face {
+  font-family: "orbitron";
+  src: url(./assets/fonts/Orbitron-VariableFont_wght.ttf) format("truetype");
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -115,5 +120,48 @@
   circle:hover {
     stroke: red;
     cursor: pointer;
+  }
+
+  /* Section 3 */
+  .card {
+    position: relative;
+    /* background-color: hsla(0, 0%, 100%, 0.3); */
+    background-color: #f0f0f0;
+  }
+
+  .card:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 35px;
+    height: 35px;
+    border-left: 1px solid black;
+    border-bottom: 1px solid black;
+  }
+
+  .card:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 35px;
+    height: 35px;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+  }
+
+  .card-keyword h4 {
+    margin-top: 10px;
+    letter-spacing: 1px;
+    font-size: small;
+    font-family: "orbitron";
+    border: 1px solid black;
+    padding: 2px 10px;
+  }
+
+  .card-technology h5 {
+    margin-top: 10px;
+    font-size: xx-large;
   }
 }

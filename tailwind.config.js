@@ -4,6 +4,7 @@ module.exports = {
     extend: {
       fontFamily: {
         soehne: ["soehne", "sans-serif"],
+        orbitron: ["orbitron", "sans-serif"],
       },
     },
   },

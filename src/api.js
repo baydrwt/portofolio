@@ -22,3 +22,10 @@ export async function getExperience() {
   const dataArr = querySnapshot.docs.map((doc) => ({ ...doc.data(), id: doc.id }));
   return dataArr;
 }
+
+
+export async function getProject() {
+  const querySnapshot = await getDocs(experienceCollectionRef);
+  const dataArr = querySnapshot.docs.map((doc) => ({ ...doc.data(), id: doc.id }));
+  return dataArr;
+}

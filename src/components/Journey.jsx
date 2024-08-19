@@ -2,19 +2,13 @@ import { React, useState, Suspense } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { Link, Outlet, useLoaderData, defer, Await } from "react-router-dom";
-import { getExperience } from "../api";
+import { Await } from "react-router-dom";
 import { FaLinkedin } from "react-icons/fa";
 
 gsap.registerPlugin(ScrollTrigger);
 
-export async function loader({ params }) {
-  return defer({ experiences: getExperience() });
-}
-
-export default function Journey() {
+export default function Journey(props) {
   const [isActive, setIsActive] = useState("circle1");
-  const dataPromise = useLoaderData();
 
   function JourneyInformation(experiences) {
     const experience = experiences.find((experience) => experience.identity === isActive);
@@ -88,7 +82,7 @@ export default function Journey() {
           <h2 className="experience absolute font-soehne left-6 top-6 text-2xl font-bold opacity-0">Experience</h2>
           <div className="experience-information absolute right-6 bottom-6 h-2/4 w-2/5 border-2 border-black rounded-tl-3xl rounded-br-3xl p-3">
             <Suspense fallback={<h2>Loading Data</h2>}>
-              <Await resolve={dataPromise.experiences}>{JourneyInformation}</Await>
+              <Await resolve={props.experiences}>{JourneyInformation}</Await>
             </Suspense>
           </div>
         </div>
