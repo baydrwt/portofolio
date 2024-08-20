@@ -1,4 +1,4 @@
-import { React, useState, Suspense } from "react";
+import { React, useState, Suspense, useRef } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -9,6 +9,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 export default function Journey(props) {
   const [isActive, setIsActive] = useState("circle1");
+  const triggerRef = useRef(null);
 
   function JourneyInformation(experiences) {
     const experience = experiences.find((experience) => experience.identity === isActive);
@@ -34,8 +35,8 @@ export default function Journey(props) {
       scrollTrigger: {
         trigger: ".batas",
         start: "top bottom",
-        end: "top 52%",
-        scrub: 1.5,
+        end: "top 55%",
+        scrub: 0.6,
         autoAlpha: 1,
         // markers: true,
       },
@@ -54,7 +55,7 @@ export default function Journey(props) {
 
   return (
     <>
-      <section className="batas h-screen w-full flex justify-center overflow-visible">
+      <section className="batas h-screen w-full flex justify-center overflow-visible" ref={triggerRef}>
         <div className="box-journey border-4 rounded-3xl border-black w-1/4 h-2/4 relative flex justify-center items-end">
           <svg className="journey pt-3" width="100%" height="100%" viewBox="0 0 51 16" fill="none">
             <path id="mainPath" d="M0 15H6.5L15.5 8H25L31.5 1.5H43H51" stroke="black" strokeDasharray="100" strokeDashoffset="100" />

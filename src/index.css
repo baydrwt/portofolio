@@ -177,4 +177,12 @@
     margin-top: 10px;
     font-size: xx-large;
   }
+
+  /* Section 4 */
+  .technology {
+    height: 85vh;
+    margin-bottom: 150vh;
+    overflow: hidden;
+    /* margin-bottom: 200vh; */
+  }
 }

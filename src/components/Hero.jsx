@@ -36,7 +36,6 @@ export default function Hero() {
         end: "top 52%",
         scrub: 1.5,
         autoAlpha: 1,
-        // markers: true,
       },
     });
     tl.to(".btn-download", { paddingLeft: 25, paddingRight: 25, ease: "slow(0.5, 0.8, true)" })

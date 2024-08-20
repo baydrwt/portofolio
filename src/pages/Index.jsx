@@ -3,6 +3,7 @@ import Header from "../components/Header";
 import Hero from "../components/Hero";
 import Journey from "../components/Journey";
 import Project from "../components/Project";
+import Technology from "../components/Technology";
 import { getExperience, getProject } from "../api";
 import { useLoaderData, defer } from "react-router-dom";
 
@@ -21,6 +22,7 @@ export default function Index() {
           <Hero />
           <Journey experiences={dataPromise.experiences} />
           <Project projects={dataPromise.projects} />
+          <Technology />
         </div>
       </div>
     </>

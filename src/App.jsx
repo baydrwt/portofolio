@@ -10,7 +10,7 @@ function App() {
       event.preventDefault();
 
       const delta = Math.sign(event.deltaY);
-      const scrollAmount = 60;
+      const scrollAmount = 65;
 
       window.scrollBy({
         top: delta * scrollAmount,
