@@ -23,6 +23,7 @@ export default function Technology() {
     });
 
     tl_tech
+      .fromTo(".text-tech", { y: -100 }, { y: 0 })
       .to(".element1", { strokeDashoffset: 0, duration: 1 })
       .fromTo(".element2", { scale: 0.5 }, { opacity: 1, duration: 0.2, scale: 1 })
       .fromTo(".element3", { scale: 0.5 }, { opacity: 1, duration: 0.2, scale: 1 })
@@ -39,8 +40,8 @@ export default function Technology() {
       .fromTo(".element14", { scale: 0.5 }, { opacity: 1, duration: 0.2, scale: 1 })
       .fromTo(".element15", { scale: 0.5 }, { opacity: 1, duration: 0.2, scale: 1 })
       .fromTo(".element16", { scale: 0.5 }, { opacity: 1, duration: 0.2, scale: 1 })
-      .fromTo(".element17", { scale: 0.5 }, { opacity: 1, duration: 0.2, scale: 1 })
-      // .to(".technology", { y: "-100vh", duration: 3 });
+      .fromTo(".element17", { scale: 0.5 }, { opacity: 1, duration: 0.2, scale: 1 });
+    // .to(".technology", { y: "-100vh", duration: 3 });
 
     return () => {
       tl_tech.kill();

@@ -34,6 +34,7 @@ export default function Project(props) {
         },
       }
     );
+
     return () => {
       pin.kill();
     };
@@ -104,8 +105,8 @@ export default function Project(props) {
 
   return (
     <section className="h-full w-full -mt-52 scroll-section-outer">
-      <h2 className="font-soehne text-3xl w-2/3 flex flex-col uppercase gap-1">
-        Project with care <span className="text-center overflow-hidden ml-20">and</span> <span className="text-end overflow-hidden">true dedication.</span>
+      <h2 className="bridging1-project font-soehne text-3xl w-2/3 flex flex-col uppercase gap-1">
+        Project with care <span className="birdging2-project text-center overflow-hidden ml-20">and</span> <span className="bridging3-project text-end overflow-hidden">true dedication.</span>
       </h2>
       <div ref={triggerRef}>
         <div ref={sectionRef} className="scroll-section-inner">

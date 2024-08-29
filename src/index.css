@@ -122,6 +122,10 @@
     cursor: pointer;
   }
 
+  .batas {
+    height: 85vh;
+  }
+
   /* Section 3 */
   .scroll-section-outer {
     overflow: hidden;
@@ -239,5 +243,25 @@
 
   .btn-form:hover span {
     transform: translate(160%, -160%);
+  }
+
+  .socmed-box:hover {
+    cursor: pointer;
+  }
+
+  .github,
+  .instagram,
+  .linkedin {
+    transition: all 0.3s ease-in-out;
+  }
+
+  .socmed-box:nth-child(1):hover .github {
+    scale: 1.5;
+  }
+  .socmed-box:nth-child(2):hover .instagram {
+    scale: 1.5;
+  }
+  .socmed-box:nth-child(3):hover .linkedin {
+    scale: 1.5;
   }
 }

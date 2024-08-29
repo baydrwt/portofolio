@@ -3,7 +3,7 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { BsArrowUpRight } from "react-icons/bs";
-import { FaGithub } from "react-icons/fa";
+import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -27,7 +27,7 @@ export default function Form() {
   //   });
 
   return (
-    <section className="form bg-red-50 w-full mb-5 py-10 px-5 relative overflow-hidden" ref={triggerRef}>
+    <section className="form w-full mb-5 px-5 relative overflow-hidden" ref={triggerRef}>
       <div className="box-form flex justify-between my-10">
         <h2 className="font-soehne text-6xl tracking-wider overflow-hidden">Let's Jam.</h2>
         <button type="button" className="btn-form flex items-center text-2xl border-2 rounded-full gap-3 px-5 py-3 relative overflow-hidden border-black">
@@ -50,17 +50,17 @@ export default function Form() {
         </div>
       </div>
       <div className="flex border-2 rounded-lg h-2/5">
-        <div className="flex flex-col p-8 w-full justify-between border-r-2">
-          <FaGithub />
-          <p>GitHub</p>
+        <div className="socmed-box flex flex-col p-8 w-full justify-between border-r-2">
+          <FaGithub className="github text-3xl" />
+          <p className="font-bold tracking-wider font-soehne">GitHub</p>
         </div>
-        <div className="flex flex-col p-8 w-full justify-between border-r-2">
-          <FaGithub />
-          <p>GitHub</p>
+        <div className="socmed-box flex flex-col p-8 w-full justify-between border-r-2">
+          <FaInstagram className="instagram text-3xl" />
+          <p className="font-bold tracking-wider font-soehne">Instagram</p>
         </div>
-        <div className="flex flex-col p-8 w-full justify-between">
-          <FaGithub />
-          <p>GitHub</p>
+        <div className="socmed-box flex flex-col p-8 w-full justify-between">
+          <FaLinkedin className="linkedin text-3xl" />
+          <p className="font-bold tracking-wider font-soehne">LinkedIn</p>
         </div>
       </div>
     </section>
