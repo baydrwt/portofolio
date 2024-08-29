@@ -4,6 +4,7 @@ import Hero from "../components/Hero";
 import Journey from "../components/Journey";
 import Project from "../components/Project";
 import Technology from "../components/Technology";
+import Form from "../components/Form";
 import { getExperience, getProject } from "../api";
 import { useLoaderData, defer } from "react-router-dom";
 
@@ -23,6 +24,7 @@ export default function Index() {
           <Journey experiences={dataPromise.experiences} />
           <Project projects={dataPromise.projects} />
           <Technology />
+          <Form />
         </div>
       </div>
     </>

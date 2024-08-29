@@ -8,7 +8,7 @@ import { FaLinkedin } from "react-icons/fa";
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Journey(props) {
-  const [isActive, setIsActive] = useState("circle1");
+  const [isActive, setIsActive] = useState("circle1");    
   const triggerRef = useRef(null);
 
   function JourneyInformation(experiences) {

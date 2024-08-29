@@ -29,3 +29,5 @@ export async function getProject() {
   const dataArr = querySnapshot.docs.map((doc) => ({ ...doc.data(), id: doc.id }));
   return dataArr;
 }
+  
+  
