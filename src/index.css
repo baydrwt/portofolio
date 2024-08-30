@@ -187,6 +187,8 @@
     height: 85vh;
     margin-bottom: 150vh;
     overflow: hidden;
+    background-color: #f0f0f0;
+    z-index: 10;
   }
 
   /* Section 5 */

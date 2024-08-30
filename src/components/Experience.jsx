@@ -6,8 +6,6 @@ import { useGSAP } from "@gsap/react";
 gsap.registerPlugin();
 
 export const Experience = () => {
-  const main = useRef();
-
   useGSAP(() => {
     const tl = gsap.timeline({
       scrollTrigger: {
@@ -26,7 +24,7 @@ export const Experience = () => {
       <OrbitControls enableZoom={false} enableRotate={false} />
       <Environment preset="sunset" blur={0.4} />
       <Float floatIntensity={0.045} speed={1} floatingRange={[1, 3]}>
-        <Jet className="jet" scale={0.08} position={[-4.8, -1, -1.7]} rotation={[0.15, -0.2, -0.2]} ref={main} />
+        <Jet className="jet" scale={0.08} position={[-4.8, -1, -1.7]} rotation={[0.15, -0.2, -0.2]} />
       </Float>
       <pointLight position={[-10, 10, 2]} intensity={1} />
     </>

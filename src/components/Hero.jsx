@@ -43,7 +43,7 @@ export default function Hero() {
       .to(".title", { y: 50, scale: 0.3, opacity: 0, ease: "slow(0.5, 0.8, true)" })
       .to(".text", { y: 80, opacity: 0, delay: 0.5, ease: "slow(0.5, 0.8, true)" })
       .to(".btn-download", { opacity: 0, ease: "slow(0.5, 0.8, true)" })
-      .to(".btn-download", { position: "fixed", bottom: 50, opacity: 1, backgroundColor: "white", ease: "slow(0.5, 0.8, true)" })
+      .to(".btn-download", { position: "fixed", bottom: 50, opacity: 1, backgroundColor: "white", zIndex: 99, ease: "slow(0.5, 0.8, true)" })
       .fromTo(".experience", { y: -55 }, { opacity: 1, duration: 0.2, y: 0 })
       .to("#mainPath", { strokeDashoffset: 0, duration: 1 })
       .to("#circle1", { opacity: 1, duration: 0.2 })

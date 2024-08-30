@@ -10,21 +10,20 @@ gsap.registerPlugin(ScrollTrigger);
 export default function Form() {
   const triggerRef = useRef(null);
 
-  //   useGSAP(() => {
-  //     const tl_form = gsap.timeline({
-  //       scrollTrigger: {
-  //         trigger: triggerRef.current,
-  //         start: "-25% 80%",
-  //         end: "top top",
-  //         pin: true,
-  //         scrub: 1,
-  //         autoAlpha: 1,
-  //         markers: true,
-  //       },
-  //     });
+  useGSAP(() => {
+    const tl_form = gsap.timeline({
+      scrollTrigger: {
+        trigger: triggerRef.current,
+        start: "-25% bottom",
+        end: "bottom -80%",
+        pin: true,
+        scrub: 1,
+        // markers: true,
+      },
+    });
 
-  //     // tl_form.fromTo(".form", { y: "-120vh" }, { y: "-120vh" });
-  //   });
+    tl_form.fromTo(".form", { y: "-120vh", opacity: 0 }, { y: "-120vh", opacity: 1 }).fromTo(".form", { y: "-120vh", opacity: 1 }, { y: "-115vh" }).fromTo(".technology", { y: 0 }, { y: "-100vh" }).to(".form", { opacity: 1 });
+  });
 
   return (
     <section className="form w-full mb-5 px-5 relative overflow-hidden" ref={triggerRef}>
@@ -42,7 +41,7 @@ export default function Form() {
         <div className="ml-auto flex-end">
           <h4 className="">I always up for a tea and a chat,</h4>
           <p>
-            <a href="" className="mr-1">
+            <a href="mailto:bayu0825.bd@gmail.com" target="blank_" className="mr-1">
               Send me a message
             </a>
             and i'll get back to you!
@@ -50,18 +49,18 @@ export default function Form() {
         </div>
       </div>
       <div className="flex border-2 rounded-lg h-2/5">
-        <div className="socmed-box flex flex-col p-8 w-full justify-between border-r-2">
+        <a href="https://github.com/baydrwt/" target="blank_" className="socmed-box flex flex-col p-8 w-full justify-between border-r-2">
           <FaGithub className="github text-3xl" />
           <p className="font-bold tracking-wider font-soehne">GitHub</p>
-        </div>
-        <div className="socmed-box flex flex-col p-8 w-full justify-between border-r-2">
+        </a>
+        <a href="https://www.instagram.com/baydrwt/" target="blank_" className="socmed-box flex flex-col p-8 w-full justify-between border-r-2">
           <FaInstagram className="instagram text-3xl" />
           <p className="font-bold tracking-wider font-soehne">Instagram</p>
-        </div>
-        <div className="socmed-box flex flex-col p-8 w-full justify-between">
+        </a>
+        <a href="https://www.linkedin.com/in/bayu-darwanto/" target="blank_" className="socmed-box flex flex-col p-8 w-full justify-between">
           <FaLinkedin className="linkedin text-3xl" />
           <p className="font-bold tracking-wider font-soehne">LinkedIn</p>
-        </div>
+        </a>
       </div>
     </section>
   );

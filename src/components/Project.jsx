@@ -64,8 +64,8 @@ export default function Project(props) {
       };
 
       return (
-        <div className="scroll-section h-3/4 mt-24 mr-8">
-          <a href={project.link !== "" ? project.link : null} key={project.name} target="blank_">
+        <div className="scroll-section h-3/4 mt-24 mr-8" key={project.name}>
+          <a href={project.link !== "" ? project.link : null} target="blank_">
             <div className={`card w-full h-4/5 ${project.publish && `hover:scale-95`}`}>
               <img src={`${path + project.image}.png`} alt={project.image} className="h-2/3 w-full" />
               <div className="card-info py-2 px-4 flex flex-col">
@@ -87,8 +87,8 @@ export default function Project(props) {
                     const TechLogoComponent = logos[techElement];
 
                     return TechLogoComponent ? (
-                      <h5>
-                        <TechLogoComponent key={i} />
+                      <h5 key={i}>
+                        <TechLogoComponent />
                       </h5>
                     ) : null;
                   })}

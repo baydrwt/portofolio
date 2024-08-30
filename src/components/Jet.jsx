@@ -4,7 +4,7 @@ Command: npx gltfjsx@6.2.3 public/models/Jet.glb -o src/components/Jet.jsx -r pu
 */
 
 import { useRef, useEffect, useState, useLayoutEffect } from "react";
-import { useGLTF, useScroll } from "@react-three/drei";
+import { useGLTF } from "@react-three/drei";
 import { useFrame } from "@react-three/fiber";
 import * as THREE from "three";
 import gsap from "gsap";
