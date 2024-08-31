@@ -3,13 +3,13 @@ import { getFirestore, collection, getDocs, doc, getDoc, query, where } from "fi
 import { getAnalytics } from "firebase/analytics";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyCbT7ILk06q32jNSkhNkqjmolwxgCm9Qps",
-  authDomain: "baydrwt-portofoliio.firebaseapp.com",
-  projectId: "baydrwt-portofoliio",
-  storageBucket: "baydrwt-portofoliio.appspot.com",
-  messagingSenderId: "335413221854",
-  appId: "1:335413221854:web:1de9103af8af33e8d0654f",
-  measurementId: "G-ZZN85B7MC8",
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+  authDomain: import.meta.env.VITE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_MESSAGE_SENDER_ID,
+  appId: import.meta.env.VITE_APP_ID,
+  measurementId: import.meta.env.VITE_MEASUREMENT_ID,
 };
 
 // const analytics = getAnalytics(app);
@@ -29,5 +29,3 @@ export async function getProject() {
   const dataArr = querySnapshot.docs.map((doc) => ({ ...doc.data(), id: doc.id }));
   return dataArr;
 }
-  
-  

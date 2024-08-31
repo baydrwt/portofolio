@@ -1,5 +1,4 @@
 import { React } from "react";
-import Header from "../components/Header";
 import Hero from "../components/Hero";
 import Journey from "../components/Journey";
 import Project from "../components/Project";
@@ -16,17 +15,14 @@ export default function Index() {
   const dataPromise = useLoaderData();
 
   return (
-    <>
-      <Header />
-      <div className="content">
-        <div className="px-32 flex flex-col justify-center items-center">
-          <Hero />
-          <Journey experiences={dataPromise.experiences} />
-          <Project projects={dataPromise.projects} />
-          <Technology />
-          <Form />
-        </div>
+    <div className="content">
+      <div className="flex flex-col justify-center items-center">
+        <Hero />
+        <Journey experiences={dataPromise.experiences} />
+        <Project projects={dataPromise.projects} />
+        <Technology />
+        <Form />
       </div>
-    </>
+    </div>
   );
 }

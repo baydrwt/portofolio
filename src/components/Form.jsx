@@ -1,4 +1,5 @@
 import React, { useRef } from "react";
+import { Link } from "react-router-dom";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -29,19 +30,19 @@ export default function Form() {
     <section className="form w-full mb-5 px-5 relative overflow-hidden" ref={triggerRef}>
       <div className="box-form flex justify-between my-10">
         <h2 className="font-soehne text-6xl tracking-wider overflow-hidden">Let's Jam.</h2>
-        <button type="button" className="btn-form flex items-center text-2xl border-2 rounded-full gap-3 px-5 py-3 relative overflow-hidden border-black">
+        <Link to="/contact" type="button" className="btn-form font-soehne flex items-center text-2xl border-2 rounded-full gap-3 px-5 py-3 relative overflow-hidden border-black">
           Contact Me
           <span>
             <BsArrowUpRight />
           </span>
-        </button>
+        </Link>
       </div>
       <div className="flex mt-14 mb-28">
         <div className="border-s-2 border-t-2 border-black w-3/5"></div>
         <div className="ml-auto flex-end">
-          <h4 className="">I always up for a tea and a chat,</h4>
-          <p>
-            <a href="mailto:bayu0825.bd@gmail.com" target="blank_" className="mr-1">
+          <h4 className="font-soehne">I always up for a tea and a chat,</h4>
+          <p className="font-soehne">
+            <a href="mailto:bayu0825.bd@gmail.com" target="blank_" className="form-email mr-1">
               Send me a message
             </a>
             and i'll get back to you!

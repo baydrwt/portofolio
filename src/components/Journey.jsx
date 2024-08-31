@@ -55,7 +55,7 @@ export default function Journey(props) {
 
   return (
     <>
-      <section className="batas h-screen w-full flex justify-center overflow-visible" ref={triggerRef}>
+      <section className="batas h-screen w-full flex justify-center overflow-visible ml-2" ref={triggerRef}>
         <div className="box-journey border-4 rounded-3xl border-black w-1/4 h-2/4 relative flex justify-center items-end">
           <svg className="journey pt-3" width="100%" height="100%" viewBox="0 0 51 16" fill="none">
             <path id="mainPath" d="M0 15H6.5L15.5 8H25L31.5 1.5H43H51" stroke="black" strokeDasharray="100" strokeDashoffset="100" />
