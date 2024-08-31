@@ -88,17 +88,17 @@ export default function Contact() {
   };
 
   return (
-    <div className="h-screen w-screen">
-      <div className="flex gap-2 h-5/6 justify-between mt-24">
+    <div className="h-screen w-full">
+      <div className="flex h-5/6 justify-between mt-24">
         <div className={`box-form relative bg-transparent border-2 border-black px-5 py-10 rounded-xl h-full w-3/5 overflow-auto`}>
           <div className={`${loading && `absolute inset-0 bg-slate-700 bg-opacity-50 backdrop-blur-xl z-30`}`}>
             <form ref={form} onSubmit={sendEmail}>
               <div className="help box-question flex w-full justify-between border-b-2 pb-10 overflow-hidden">
-                <h3 className="help-text w-2/4 text-3xl font-soehne mr-16">How can i help?</h3>
+                <h3 className="help-text w-3/4 text-3xl font-soehne mr-3">How can i help?</h3>
                 <div className="radio-button-box w-2/3 flex flex-col gap-2 ">
                   <label htmlFor="fullstack" className={`radio-grup w-full flex justify-between border-2 border-slate-3 px-3 py-4 rounded-3xl font-soehne ${selectedValue.help === `fullstack` && `border-black`}`}>
                     Fullstack Development
-                    <input type="radio" checked={selectedValue.help === "fullstack"} onChange={handleChange} id="fullstack" name="help" value="fullstack" required/>
+                    <input type="radio" checked={selectedValue.help === "fullstack"} onChange={handleChange} id="fullstack" name="help" value="fullstack" required />
                   </label>
                   <label htmlFor="frontend" className={`radio-grup w-full flex justify-between border-2 border-slate-3 px-3 py-4 rounded-3xl font-soehne ${selectedValue.help === `frontend` && `border-black`}`}>
                     Frontend Development
@@ -119,7 +119,7 @@ export default function Contact() {
                 <div className="radio-button-box w-2/3 flex flex-col gap-2 ">
                   <label htmlFor="scratch" className={`radio-grup w-full flex justify-between border-2 border-slate-3 px-3 py-4 rounded-3xl font-soehne ${selectedValue.about === `scratch` && `border-black`}`}>
                     Development from Scratch
-                    <input type="radio" checked={selectedValue.about === "scratch"} onChange={handleChange} id="scratch" name="about" value="scratch" required/>
+                    <input type="radio" checked={selectedValue.about === "scratch"} onChange={handleChange} id="scratch" name="about" value="scratch" required />
                   </label>
                   <label htmlFor="improve" className={`radio-grup w-full flex justify-between border-2 border-slate-3 px-3 py-4 rounded-3xl font-soehne ${selectedValue.about === `improve` && `border-black`}`}>
                     Improve Existing System
@@ -132,11 +132,11 @@ export default function Contact() {
                 </div>
               </div>
               <div className="deadline box-question flex w-full justify-between border-b-2 pb-10 pt-10 overflow-hidden">
-                <h3 className="deadline-text w-3/3 text-3xl font-soehne">What do deadlines look like?</h3>
+                <h3 className="deadline-text w-3/3 text-3xl font-soehne mr-2">What do deadlines look like?</h3>
                 <div className="radio-button-box w-2/3 flex flex-col gap-2 ">
                   <label htmlFor="1" className={`radio-grup w-full flex justify-between border-2 border-slate-3 px-3 py-4 rounded-3xl font-soehne ${selectedValue.deadline === `1` && `border-black`}`}>
                     1 - 3 Month
-                    <input type="radio" checked={selectedValue.deadline === "1"} onChange={handleChange} id="1" name="deadline" value="1" required/>
+                    <input type="radio" checked={selectedValue.deadline === "1"} onChange={handleChange} id="1" name="deadline" value="1" required />
                   </label>
                   <label htmlFor="2" className={`radio-grup w-full flex justify-between border-2 border-slate-3 px-3 py-4 rounded-3xl font-soehne ${selectedValue.deadline === `2` && `border-black`}`}>
                     4 - 6 Month
@@ -157,8 +157,8 @@ export default function Contact() {
                 </div>
               </div>
               <div className="contact box-question flex w-full justify-between pb-10 pt-10">
-                <h3 className="w-2/3 text-3xl font-soehne">Enter your contact info</h3>
-                <div className="contact-info w-2/3 flex flex-col gap-4 mr-6">
+                <h3 className="w-2/3 text-3xl font-soehne mr-12">Enter your contact info</h3>
+                <div className="contact-info w-2/3 flex flex-col gap-4">
                   <div className="fn flex flex-col">
                     <label htmlFor="fullname" className="fn font-soehne">
                       Full Name <span className="text-red-600 font-bold ">*</span>
@@ -198,8 +198,27 @@ export default function Contact() {
             </form>
           </div>
         </div>
-        <div className="flex w-1/3">
-          <p>Lorem ipsum dolor sit.</p>
+        <div className="flex w-1/3 flex-col gap-5">
+          <div className="border-2 border-black h-2/5 rounded-xl p-5 flex flex-col justify-between">
+            <div className="">
+              <p className="font-sans text-sm">Need an interactive website?</p>
+              <h3 className="font-soehne text-3xl border-b border-slate-800 pb-5">Have a cool project to develop?</h3>
+            </div>
+            <div className="flex justify-between">
+              <div className="flex flex-col">
+                <p className="text-sm font-sans text-slate-600 font-thin">Or just say hi?</p>
+                <a href="mailto:bayu0825.bd@gmail.com" className="form-email text-sm font-sans text-slate-700 font-medium">
+                  bayu0825.bd@gmail.com
+                </a>
+              </div>
+            </div>
+          </div>
+          <div className="border-2 border-black h-3/5 rounded-xl p-5 text-justify">
+            <p>
+              <span className="ml-10">Lorem ipsum dolor sit amet consectetur adipisicing elit.</span> Dignissimos inventore qui autem dolore ullam quidem animi? Ducimus ratione inventore dignissimos sed, saepe ex neque nisi voluptate aperiam
+              explicabo ipsum mollitia eum nam laborum animi minima iusto esse alias. Cum non quos laboriosam quas eligendi ipsa dolor quisquam minus delectus asperiores?
+            </p>
+          </div>
         </div>
       </div>
     </div>
