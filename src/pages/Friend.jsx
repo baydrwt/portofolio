@@ -3,6 +3,7 @@ import { getFriends } from "../api";
 import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
 import { IoMdJet } from "react-icons/io";
 import { Suspense } from "react";
+import Loader from "../components/Loader";
 
 export async function loader() {
   return defer({ friends: getFriends() });
@@ -43,7 +44,13 @@ export default function Friend() {
     <div className="h-screen w-full flex flex-col justify-center">
       <h2 className="font-soehne text-2xl">Friends & Collaborators : Check this out 🚀</h2>
       <div className="box-friends grid grid-cols-3 gap-5 w-full h-2/4 my-7">
-        <Suspense>
+        <Suspense
+          fallback={
+            <h2 className="h-screen w-full">
+              <Loader />
+            </h2>
+          }
+        >
           <Await resolve={dataPromise.friends}>{cardFriends}</Await>
         </Suspense>
       </div>
