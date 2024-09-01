@@ -6,7 +6,6 @@ This is my personal portfolio website built using modern web technologies includ
 
 - [Features](#features)
 - [Technologies Used](#technologies-used)
-- [Project Structure](#project-structure)
 
 ## Features
 
@@ -23,19 +22,5 @@ This is my personal portfolio website built using modern web technologies includ
 
 ## Demo
 Demo : https://baydrwtportofolio.netlify.app/
-
-## Project Structure
-
-```plaintext
-├── public
-│   └── index.html
-├── src
-│   ├── assets
-│   ├── components
-│   ├── pages
-│   ├── App.js
-│   ├── index.js
-│   └── styles.css
-└── package.json
 
 
