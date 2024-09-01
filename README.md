@@ -6,10 +6,7 @@ This is my personal portfolio website built using modern web technologies includ
 
 - [Features](#features)
 - [Technologies Used](#technologies-used)
-- [Installation](#installation)
-- [Usage](#usage)
 - [Project Structure](#project-structure)
-- [License](#license)
 
 ## Features
 
@@ -24,6 +21,9 @@ This is my personal portfolio website built using modern web technologies includ
 - **Three.js**: A powerful 3D library that allows the creation of 3D content in the browser.
 - **CSS/Tailwind CSS**: Used for styling components and layout.
 
+## Demo
+Demo : https://baydrwtportofolio.netlify.app/
+
 ## Project Structure
 
 ```plaintext
@@ -37,3 +37,5 @@ This is my personal portfolio website built using modern web technologies includ
 │   ├── index.js
 │   └── styles.css
 └── package.json
+
+
