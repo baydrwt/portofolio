@@ -6,6 +6,7 @@ import Contact from "./pages/Contact";
 import About from "./pages/About";
 import Error from "./pages/Error";
 import NotFound from "./pages/NotFound";
+import Certificate, { loader as certificateLoader } from "./pages/Certificate";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -13,6 +14,7 @@ const router = createBrowserRouter(
       <Route index element={<Index />} loader={indexLoader} />
       <Route path="contact" element={<Contact />} />
       <Route path="about" element={<About />} />
+      <Route path="certificate" element={<Certificate />} loader={certificateLoader} />
 
       <Route path="*" element={<NotFound />} />
     </Route>

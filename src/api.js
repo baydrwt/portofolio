@@ -17,6 +17,7 @@ const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 const experienceCollectionRef = collection(db, "experience");
 const projectCollectionRef = collection(db, "projects");
+const certificatesCollectionRef = collection(db, "certificates");
 
 export async function getExperience() {
   const querySnapshot = await getDocs(experienceCollectionRef);
@@ -26,6 +27,12 @@ export async function getExperience() {
 
 export async function getProject() {
   const querySnapshot = await getDocs(projectCollectionRef);
+  const dataArr = querySnapshot.docs.map((doc) => ({ ...doc.data(), id: doc.id }));
+  return dataArr;
+}
+
+export async function getCertificates() {
+  const querySnapshot = await getDocs(certificatesCollectionRef);
   const dataArr = querySnapshot.docs.map((doc) => ({ ...doc.data(), id: doc.id }));
   return dataArr;
 }

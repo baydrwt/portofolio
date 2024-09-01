@@ -55,7 +55,7 @@ export default function Header() {
     }
   };
   return (
-    <header className={`container w-screen fixed left-1/2 transform -translate-x-1/2 py-6 flex justify-around z-50 rounded-b-2xl ${isAtTop ? "bg-transparent" : "bg-white"}`} ref={navbarRef}>
+    <header className={`container w-11/12 fixed left-1/2 transform -translate-x-1/2 py-6 flex justify-around z-50 rounded-b-2xl ${isAtTop ? "bg-transparent" : "bg-white"}`} ref={navbarRef}>
       <Link to="/" className="font-soehne py-2">
         BYD | Portofolio
       </Link>

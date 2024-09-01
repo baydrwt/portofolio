@@ -488,6 +488,23 @@
     height: 284px;
   }
 
+  .card-certificate {
+    width: 100%;
+    height: 300px;
+  }
+
+  .card-certificate img {
+    height: 200px !important;
+  }
+
+  .about-certif {
+    font-size: 12px;
+  }
+
+  #ReactSimpleImageViewer { 
+    z-index: 999;
+  }
+
   @keyframes rotate {
     to {
       transform: rotate(360deg);
