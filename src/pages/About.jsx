@@ -12,7 +12,7 @@ export default function About() {
       <div className="w-1/4 bg-white p-4 pb-16 shadow-xl relative z-10 transform transition-all duration-300 ease-in-out cursor-pointer hover:shadow-2xl" onClick={handleClick}>
         <ReactCardFlip isFlipped={isFlipped} flipDirection="horizontal" className="reactFlipz-10">
           <div className="front z-10 flex items-center">
-            <img src="/image/about/bayu.jpg" alt="" className="w-full h-full object-cover shadow-lg z-50" />
+            <img src="/image/about/bayu.jpg" alt="bayu_darwanto" className="w-full h-full object-cover shadow-lg z-50" />
           </div>
           <div className="back z-10">
             <p className="z-10 font-sans">

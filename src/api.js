@@ -18,6 +18,7 @@ const db = getFirestore(app);
 const experienceCollectionRef = collection(db, "experience");
 const projectCollectionRef = collection(db, "projects");
 const certificatesCollectionRef = collection(db, "certificates");
+const friendsCollectionRef = collection(db, "friends");
 
 export async function getExperience() {
   const querySnapshot = await getDocs(experienceCollectionRef);
@@ -33,6 +34,12 @@ export async function getProject() {
 
 export async function getCertificates() {
   const querySnapshot = await getDocs(certificatesCollectionRef);
+  const dataArr = querySnapshot.docs.map((doc) => ({ ...doc.data(), id: doc.id }));
+  return dataArr;
+}
+
+export async function getFriends() {
+  const querySnapshot = await getDocs(friendsCollectionRef);
   const dataArr = querySnapshot.docs.map((doc) => ({ ...doc.data(), id: doc.id }));
   return dataArr;
 }

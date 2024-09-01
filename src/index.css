@@ -280,7 +280,8 @@
   }
 
   .form-email:before,
-  .home-link:before {
+  .home-link:before,
+  .link:before {
     content: "";
     border-bottom: 1px solid black;
     width: 0%;
@@ -291,7 +292,12 @@
   }
 
   .form-email:hover:before,
-  .home-link:hover:before {
+  .home-link:hover:before,
+  .link:hover:before {
+    width: 100%;
+  }
+
+  .link-logo:hover + .link:before {
     width: 100%;
   }
 
@@ -501,7 +507,7 @@
     font-size: 12px;
   }
 
-  #ReactSimpleImageViewer { 
+  #ReactSimpleImageViewer {
     z-index: 999;
   }
 
