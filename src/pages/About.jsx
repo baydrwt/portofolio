@@ -25,7 +25,7 @@ export default function About() {
       <div className="description font-soehne text-justify w-3/4 flex flex-col gap-5">
         <h1 className="text-2xl">Bayu Darwanto | 22 Years Old.</h1>
         <h2 className="">
-          I am a graduate of Universitas Gunadarma with a degree in Informatics, achieving a GPA of 3.84. I have a strong interest in website development, particularly in frontend development. Throughout my studies, I gained significant
+          I am a graduate of University of Gunadarma with a degree in Informatics, achieving a GPA of 3.84. I have a strong interest in website development, particularly in frontend development. Throughout my studies, I gained significant
           programming experience, especially in web development. I also completed internships as a Web Developer at Hashmicro through the MSIB Kampus Merdeka program and as a Software Developer at Transretail Indonesia. During these
           internships, I successfully completed all assigned tasks within the specified deadlines.
         </h2>
