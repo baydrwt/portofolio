@@ -68,9 +68,14 @@ export default function Hero() {
           <Experience />
         </Canvas>
       </div>
-      <button type="button" className="btn-download flex items-center gap-5 bg-transparent mt-5 py-3 px-10 rounded-3xl text-black border-2 border-slate-950 font-soehne tracking-widest opacity-0 hover:cursor-pointer">
+      <a
+        href="../../public/portofolio/CV BAYU DARWANTO.pdf"
+        download="CV BAYU DARWANTO.pdf"
+        type="button"
+        className="btn-download flex items-center gap-5 bg-transparent mt-5 py-3 px-10 rounded-3xl text-black border-2 border-slate-950 font-soehne tracking-widest opacity-0 hover:cursor-pointer"
+      >
         <FaCloudDownloadAlt className="text-3xl" /> <span className="btn-text">Download Resume</span>
-      </button>
+      </a>
     </section>
   );
 }
