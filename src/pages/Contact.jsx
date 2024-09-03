@@ -199,7 +199,7 @@ export default function Contact() {
           </div>
         </div>
         <div className="flex w-full md:w-1/3 flex-col gap-5">
-          <div className="border-2 border-black h-full md:h-2/5 rounded-xl p-4 md:p-5 flex flex-col justify-between">
+          <div className="border-2 border-black h-full md:h-2/5 rounded-xl px-4 py-2 md:p-5 flex flex-col justify-between overflow-hidden">
             <div className="">
               <p className="font-sans text-xs md:text-sm">Need an interactive website?</p>
               <h3 className="font-soehne md:text-3xl border-b border-slate-800 pb-5">Have a cool project to develop?</h3>
