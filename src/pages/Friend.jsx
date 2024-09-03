@@ -41,7 +41,7 @@ export default function Friend() {
     return cardEl;
   }
   return (
-    <div className="h-screen w-full flex flex-col mt-28 md:justify-center">
+    <div className="h-screen w-full flex flex-col mt-28 md:justify-center md:mt-0">
       <h2 className="font-soehne text-xl md:text-2xl">Friends & Collaborators : Check this out 🚀</h2>
       <div className="box-friends grid md:grid-cols-3 gap-5 w-full h-2/4 my-7">
         <Suspense
