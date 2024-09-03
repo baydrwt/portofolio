@@ -91,7 +91,7 @@ export default function Project(props) {
         <div className="scroll-section h-3/4 mt-24 mr-8" key={project.name}>
           <a href={project.link !== "" ? project.link : null} target="blank_">
             <div className={`card w-full h-full md:h-4/5 ${project.publish && `hover:scale-95`} overflow-hidden`}>
-              <img src={`${path + project.image}.png`} alt={project.image} className="h-2/3 w-full object-cover object-center md:object-fit" />
+              <img src={`${path + project.image}.webp`} alt={project.image} className="h-2/3 w-full object-cover object-center md:object-fit" />
               <div className="card-info py-0 md:py-2 px-4 flex flex-col">
                 <h3 className="font-orbitron flex justify-between items-center">
                   {project.name}
