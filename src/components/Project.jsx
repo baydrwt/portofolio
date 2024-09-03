@@ -8,21 +8,45 @@ import { TbWorldOff, TbWorldShare } from "react-icons/tb";
 import { BiLogoPostgresql as PostgreLogo } from "react-icons/bi";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
+import { useState } from "react";
+import { useEffect } from "react";
 
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Project(props) {
   const sectionRef = useRef(null);
   const triggerRef = useRef(null);
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 640);
+  let rangeTranslateX;
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 640);
+    };
+
+    handleResize();
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   useGSAP(() => {
+    if (isMobile) {
+      rangeTranslateX = "-505vw";
+    } else {
+      rangeTranslateX = "-205vw";
+    }
+
     const pin = gsap.fromTo(
       sectionRef.current,
       {
         translateX: 0,
       },
       {
-        translateX: "-205vw",
+        translateX: rangeTranslateX,
         ease: "none",
         duration: 1,
         scrollTrigger: {
@@ -66,14 +90,14 @@ export default function Project(props) {
       return (
         <div className="scroll-section h-3/4 mt-24 mr-8" key={project.name}>
           <a href={project.link !== "" ? project.link : null} target="blank_">
-            <div className={`card w-full h-4/5 ${project.publish && `hover:scale-95`}`}>
-              <img src={`${path + project.image}.png`} alt={project.image} className="h-2/3 w-full" />
-              <div className="card-info py-2 px-4 flex flex-col">
+            <div className={`card w-full h-full md:h-4/5 ${project.publish && `hover:scale-95`} overflow-hidden`}>
+              <img src={`${path + project.image}.png`} alt={project.image} className="h-2/3 w-full object-cover object-center md:object-fit" />
+              <div className="card-info py-0 md:py-2 px-4 flex flex-col">
                 <h3 className="font-orbitron flex justify-between items-center">
                   {project.name}
                   <span className="text-3xl">{project.publish ? <TbWorldShare /> : <TbWorldOff />}</span>
                 </h3>
-                <div className="card-keyword flex gap-4">
+                <div className="card-keyword flex gap-1 md:gap-4 flex-col text-center md:text-left md:flex-row">
                   {keywords.map((keyword, index) => (
                     <h4 key={index} className="uppercase">
                       {keyword}
@@ -105,8 +129,8 @@ export default function Project(props) {
 
   return (
     <section className="h-full w-full -mt-52 scroll-section-outer">
-      <h2 className="bridging1-project font-soehne text-3xl w-2/3 flex flex-col uppercase gap-1">
-        Project with care <span className="birdging2-project text-center overflow-hidden ml-20">and</span> <span className="bridging3-project text-end overflow-hidden">true dedication.</span>
+      <h2 className="bridging1-project font-soehne text-2xl md:text-3xl w-full md:w-2/3 flex flex-col uppercase gap-1 text-center md:text-start">
+        Project with care <span className="birdging2-project text-center overflow-hidden md:ml-20">and</span> <span className="bridging3-project md:text-end overflow-hidden">true dedication.</span>
       </h2>
       <div ref={triggerRef}>
         <div ref={sectionRef} className="scroll-section-inner">

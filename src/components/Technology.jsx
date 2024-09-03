@@ -49,10 +49,10 @@ export default function Technology() {
   });
 
   return (
-    <section className="technology w-full flex z-40" ref={triggerRef}>
-      <div className="box-technology border-4 rounded-xl border-black relative w-full overflow-hidden p-7">
-        <h2 className="text-tech font-soehne text-2xl leading-normal tracking-wider">Technology</h2>
-        <MyIcon className="technology-svg -mt-20 scale-125" />
+    <section className="technology w-full flex z-40 text-start" ref={triggerRef}>
+      <div className="box-technology border-4 rounded-xl border-black relative w-full overflow-hidden p-2 md:p-7">
+        <h2 className="text-tech font-soehne text-md md:text-2xl leading-normal tracking-wider mt-4 md:mt-0">Technology</h2>
+        <MyIcon className="technology-svg md:-mt-20 scale-125" />
       </div>
     </section>
   );

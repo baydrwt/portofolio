@@ -86,7 +86,7 @@ export default function Header() {
         }`}
         ref={navbarRef}
       >
-        <Link to="/" className="font-soehne py-2 text-md">
+        <Link to="/" className="font-soehne py-2 text-xl md:text-md">
           BYD | Portofolio
         </Link>
         <div className="menu hidden md:ml-10 md:w-3/3 md:px-4 py-1 md:flex md:justify-center md:text-center md:gap-3 md:rounded-md md:border-2 md:border-slate-300">

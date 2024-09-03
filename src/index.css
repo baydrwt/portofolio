@@ -563,4 +563,21 @@
       opacity: 0;
     }
   }
+
+  @media screen and (max-width: 640px) {
+    .scroll-section-inner {
+      width: 590vw;
+    }
+
+    .technology {
+      height: 55vh;
+      display: flex;
+      justify-content: center;
+    }
+
+    .technology-svg{
+      margin-top: -90px;
+      padding: 26px;
+    }
+  }
 }

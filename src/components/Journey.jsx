@@ -76,7 +76,7 @@ export default function Journey(props) {
     <>
       <section className="batas h-screen w-full flex justify-center overflow-visible ml-2" ref={triggerRef}>
         <div className="box-journey border-4 rounded-3xl border-black w-2/3 h-2/4 relative flex justify-center items-end md:w-1/4">
-          <svg className="journey pt-3" width="100%" height="100%" viewBox="0 0 51 16" fill="none">
+          <svg className="journey mb-24 md:mb-0 md:pt-3" width="100%" height="100%" viewBox="0 0 51 16" fill="none">
             <path id="mainPath" d="M0 15H6.5L15.5 8H25L31.5 1.5H43H51" stroke="black" strokeDasharray="100" strokeDashoffset="100" />
             <path
               id="circle1"
@@ -95,18 +95,18 @@ export default function Journey(props) {
               onClick={(e) => handleClick(e)}
             />
           </svg>
-          <p className={`sman absolute text-center left-1 text-xs bottom-56 font-bold opacity-0 md:text-lg md:bottom-48 md:rotate-0 md:left-6 ${isActive === "circle1" ? "text-red-700" : "text-black"}`}>
+          <p className={`sman absolute text-center left-1 text-xs top-36 font-bold opacity-0 md:text-lg md:top-48 md:rotate-0 md:left-6 ${isActive === "circle1" ? "text-red-700" : "text-black"}`}>
             SMAN <span className="block md:inline">97 Jakarta</span>
           </p>
-          <p className={`univ absolute text-center left-14 bottom-64 md:left-36 md:bottom-72 font-bold opacity-0 text-xs md:text-lg md:rotate-0 ${isActive === "circle2" ? "text-red-700" : "text-black"}`}>
+          <p className={`univ absolute text-center left-14 top-28 md:left-36 md:top-32 font-bold opacity-0 text-xs md:text-lg md:rotate-0 ${isActive === "circle2" ? "text-red-700" : "text-black"}`}>
             Universitas <span className="block md:inline">Gunadarma</span>
           </p>
-          <p className={`magang1 absolute right-16 md:right-64 top-28 md:top-16 pr-2 font-bold opacity-0 text-xs md:text-lg ${isActive === "circle3" ? "text-red-700" : "text-black"}`}>Hashmicro</p>
+          <p className={`magang1 absolute right-16 md:right-64 top-24 md:top-16 pr-2 font-bold opacity-0 text-xs md:text-lg ${isActive === "circle3" ? "text-red-700" : "text-black"}`}>Hashmicro</p>
           <p className={`magang2 absolute text-center right-2 md:right-2 top-16 md:top-16 font-bold opacity-0 text-xs md:text-lg ${isActive === "circle4" ? "text-red-700" : "text-black"}`}>
             Transretail <span className="block md:inline">Indonesia</span>
           </p>
-          <h2 className="experience absolute font-soehne left-6 top-6 font-bold opacity-0 md:text-2xl">Experience</h2>
-          <div className="experience-information absolute right-6 bottom-6 h-2/5 md:h-2/4 w-3/5 md:w-2/5 border-2 border-black rounded-tl-3xl rounded-br-3xl p-3">
+          <h2 className="experience absolute font-soehne left-6 top-6 font-bold opacity-0 text-xl md:text-2xl">Experience</h2>
+          <div className="experience-information absolute right-6 bottom-14 md:bottom-6 h-2/5 md:h-2/4 w-4/5 md:w-2/5 border-2 border-black rounded-tl-3xl rounded-br-3xl p-3">
             <Suspense fallback={<h2>Loading Data</h2>}>
               <Await resolve={props.experiences}>{JourneyInformation}</Await>
             </Suspense>
