@@ -65,9 +65,9 @@ export default function Certificate() {
   };
 
   return (
-    <div className="h-full w-full flex flex-col py-10 ">
-      <h2 className="mt-24 text-4xl font-soehne overflow-hidden tracking-wide">Certificate That I Achieved</h2>
-      <div className="grid grid-cols-3 gap-8 w-full  place-items-center mt-14 mb-5 pb-8">
+    <div className="h-full w-full flex flex-col md:py-10 ">
+      <h2 className="mt-24 text-lg md:text-4xl font-soehne overflow-hidden tracking-wide">Certificate That I Achieved</h2>
+      <div className="grid md:grid-cols-3 gap-8 w-full place-items-center mt-7 md:mt-14 mb-5 pb-8">
         <Suspense
           fallback={
             <h2 className="h-screen w-full">

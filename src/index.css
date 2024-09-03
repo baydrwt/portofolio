@@ -580,7 +580,7 @@
       padding: 26px;
     }
 
-    .form{
+    .form {
       height: 120vh;
     }
 
@@ -590,6 +590,16 @@
 
     .scroll-section .card {
       width: 100% !important;
+    }
+
+    .socmed-box:nth-child(1):hover .github {
+      scale: 1.2;
+    }
+    .socmed-box:nth-child(2):hover .instagram {
+      scale: 1.2;
+    }
+    .socmed-box:nth-child(3):hover .linkedin {
+      scale: 1.2;
     }
   }
 }

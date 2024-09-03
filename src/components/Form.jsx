@@ -23,11 +23,17 @@ export default function Form() {
       },
     });
 
-    tl_form.fromTo(".form", { y: "-130vh", opacity: 0 }, { y: "-130vh", opacity: 1 }).fromTo(".form", { y: "-130vh", opacity: 1 }, { y: "-125vh" }).fromTo(".technology", { y: 0 }, { y: "-110vh" }).to(".form", { opacity: 1 });
+    tl_form
+      .fromTo(".form", { y: "-130vh", opacity: 0 }, { y: "-130vh", opacity: 1 })
+      .fromTo(".box-form", { opacity: 0 }, { opacity: 1 })
+      .fromTo(".form", { y: "-130vh", opacity: 1 }, { y: "-125vh" })
+      .to(".box-form", { opacity: 1 })
+      .fromTo(".technology", { y: 0 }, { y: "-110vh" })
+      .to(".form", { opacity: 1 });
   });
 
   return (
-    <section className="form w-full md:h-full mb:mb-10 md:px-5 relative overflow-hidden md:pb-36 pt-28" ref={triggerRef}>
+    <section className="form w-full md:h-full md:mb-10 md:px-5 relative overflow-hidden md:pb-36 pt-16" ref={triggerRef}>
       <div className="box-form flex justify-between">
         <h2 className="font-soehne text-xl md:text-6xl tracking-wider overflow-hidden">Let's Jam.</h2>
         <Link to="/contact" type="button" className="btn-form font-soehne flex items-center text-sm md:text-2xl border-2 rounded-full gap-1 md:gap-3 px-3 md:px-5 py-0 md:py-3 relative overflow-hidden border-black">
@@ -49,7 +55,7 @@ export default function Form() {
           </p>
         </div>
       </div>
-      <div className="flex border-2 rounded-lg h-1/4 md:h-2/5">
+      <div className="flex border-2 rounded-lg h-1/4 md:h-3/5">
         <a href="https://github.com/baydrwt/" target="blank_" className="socmed-box flex flex-col p-1 md:p-8 w-full justify-evenly md:justify-between border-r-2">
           <FaGithub className="github text-lg md:text-3xl" />
           <p className="font-bold tracking-wider font-soehne text-xs md:text-xl">GitHub</p>
