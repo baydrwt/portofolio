@@ -57,24 +57,26 @@ export default function Hero() {
   });
 
   return (
-    <section className="hero w-screen h-screen flex flex-col justify-center items-center " ref={main}>
-      <div className="text overflow-hidden flex">
-        <p className="concept font-soehne text-2xl leading-normal z-10">from concept</p>
-        <p className="code font-soehne text-2xl leading-normal z-0 pl-2">to {code}</p>
+    <section className="hero w-screen h-screen flex flex-col justify-center items-center" ref={main}>
+      <div className="text overflow-hidden flex text-lg font-soehne leading-normal sm:text-md md:text-2xl">
+        <p className="concept z-10">from concept</p>
+        <p className="code z-0 pl-2">to {code}</p>
       </div>
-      <h1 className="title font-soehne text-2xl leading-normal tracking-wider bg-transparent p-1 z-10 font-bold">BAYU DARWANTO as WEBSITE DEVELOPER</h1>
+      <h1 className="title font-soehne text-xl leading-normal text-center bg-transparent p-1 z-10 font-bold sm:text-lg xs:w-2/3 md:text-2xl md:tracking-wider">
+        BAYU DARWANTO <span className="block md:inline">as</span> WEBSITE DEVELOPER
+      </h1>
       <div className="canvas absolute">
         <Canvas shadows camera={{ position: [3, 0, 8], fov: 30 }}>
           <Experience />
         </Canvas>
       </div>
       <a
-        href="../../public/portofolio/CV BAYU DARWANTO.pdf"
+        href="/portofolio/CV BAYU DARWANTO.pdf"
         download="CV BAYU DARWANTO.pdf"
         type="button"
-        className="btn-download flex items-center gap-5 bg-transparent mt-5 py-3 px-10 rounded-3xl text-black border-2 border-slate-950 font-soehne tracking-widest opacity-0 hover:cursor-pointer"
+        className="btn-download flex items-center text-xs gap-2 bg-transparent mt-5 py-3 px-3 rounded-3xl text-black border-2 border-slate-950 font-soehne tracking-widest opacity-0 md:px-10 md:gap-5 md:text-lg hover:cursor-pointer"
       >
-        <FaCloudDownloadAlt className="text-3xl" /> <span className="btn-text">Download Resume</span>
+        <FaCloudDownloadAlt className="text-xl md:text-3xl" /> <span className="btn-text">Download Resume</span>
       </a>
     </section>
   );

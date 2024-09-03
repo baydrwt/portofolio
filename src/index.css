@@ -528,4 +528,39 @@
       border-radius: 15%;
     }
   }
+
+  /* Menu Mobile */
+  .menu-mobile {
+    transition: transform 0.1s cubic-bezier(0.25, 0.1, 0.25, 1);
+  }
+
+  .menu-mobile.open {
+    transform: translateY(0);
+  }
+
+  .menu-mobile.closed {
+    transform: translateY(-100%);
+  }
+
+  @keyframes rotate-in {
+    0% {
+      transform: rotate(-90deg);
+      opacity: 0;
+    }
+    100% {
+      transform: rotate(0deg);
+      opacity: 1;
+    }
+  }
+
+  @keyframes rotate-out {
+    0% {
+      transform: rotate(0deg);
+      opacity: 1;
+    }
+    100% {
+      transform: rotate(90deg);
+      opacity: 0;
+    }
+  }
 }

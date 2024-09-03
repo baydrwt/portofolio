@@ -4,29 +4,47 @@ import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Await } from "react-router-dom";
 import { FaLinkedin } from "react-icons/fa";
+import { useEffect } from "react";
+import { useLayoutEffect } from "react";
 
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Journey(props) {
   const [isActive, setIsActive] = useState("circle1");
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 640);
   const triggerRef = useRef(null);
+  let boxTimelineJourney;
 
   function JourneyInformation(experiences) {
     const experience = experiences.find((experience) => experience.identity === isActive);
 
     return (
       <>
-        <h3 className="font-soehne">{experience.position}</h3>
-        <h4 className="text-sm font-extralight italic pb-2 mb-2 border-b-2 flex items-center">
+        <h3 className="font-soehne text-sm md:text-md">{experience.position}</h3>
+        <h4 className="text-xs md:text-sm font-extralight italic pb-2 mb-2 border-b-2 flex items-center">
           <a href={`${experience.profile}`} target="blank_" className="pr-1">
             <FaLinkedin />
           </a>
           | {experience.date_start} - {experience.date_end}
         </h4>
-        <p className="text-sm text-justify">{experience.description}</p>
+        <p className="text-xs md:text-sm text-justify">{experience.description}</p>
       </>
     );
   }
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 640);
+    };
+
+    handleResize();
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   useGSAP(() => {
     gsap.timeline().fromTo(".box-journey", { y: 0, delay: 3 }, { y: -150, duration: 3 });
@@ -42,11 +60,12 @@ export default function Journey(props) {
       },
     });
 
-    tl.fromTo(".box-journey", { y: -150 }, { y: -220, width: "75%", height: "75%", x: -140, ease: "slow(0.5, 0.8, true)" }).fromTo(
-      ".experience-information",
-      { x: 55, opacity: 0 },
-      { opacity: 1, duration: 0.2, x: 0, ease: "slow(0.5, 0.8, true)" }
-    );
+    if (isMobile) {
+      boxTimelineJourney = { y: -150, width: "95%", height: "75%", ease: "slow(0.5, 0.8, true)" };
+    } else {
+      boxTimelineJourney = { y: -220, width: "75%", height: "75%", x: -140, ease: "slow(0.5, 0.8, true)" };
+    }
+    tl.fromTo(".box-journey", { y: -150 }, boxTimelineJourney).fromTo(".experience-information", { x: 55, opacity: 0 }, { opacity: 1, duration: 0.2, x: 0, ease: "slow(0.5, 0.8, true)" });
   });
 
   function handleClick(e) {
@@ -56,7 +75,7 @@ export default function Journey(props) {
   return (
     <>
       <section className="batas h-screen w-full flex justify-center overflow-visible ml-2" ref={triggerRef}>
-        <div className="box-journey border-4 rounded-3xl border-black w-1/4 h-2/4 relative flex justify-center items-end">
+        <div className="box-journey border-4 rounded-3xl border-black w-2/3 h-2/4 relative flex justify-center items-end md:w-1/4">
           <svg className="journey pt-3" width="100%" height="100%" viewBox="0 0 51 16" fill="none">
             <path id="mainPath" d="M0 15H6.5L15.5 8H25L31.5 1.5H43H51" stroke="black" strokeDasharray="100" strokeDashoffset="100" />
             <path
@@ -76,12 +95,18 @@ export default function Journey(props) {
               onClick={(e) => handleClick(e)}
             />
           </svg>
-          <p className={`sman absolute left-6 bottom-48 text-lg font-bold opacity-0 ${isActive === "circle1" ? "text-red-700" : "text-black"}`}>SMAN 97 Jakarta</p>
-          <p className={`univ absolute left-36 bottom-72 text-lg font-bold opacity-0 ${isActive === "circle2" ? "text-red-700" : "text-black"}`}>Universitas Gunadarma</p>
-          <p className={`magang1 absolute right-64 top-16 pr-2 text-lg font-bold opacity-0 ${isActive === "circle3" ? "text-red-700" : "text-black"}`}>Hashmicro</p>
-          <p className={`magang2 absolute right-2 top-16 text-lg font-bold opacity-0 ${isActive === "circle4" ? "text-red-700" : "text-black"}`}>Trans Retail Indonesia</p>
-          <h2 className="experience absolute font-soehne left-6 top-6 text-2xl font-bold opacity-0">Experience</h2>
-          <div className="experience-information absolute right-6 bottom-6 h-2/4 w-2/5 border-2 border-black rounded-tl-3xl rounded-br-3xl p-3">
+          <p className={`sman absolute text-center left-1 text-xs bottom-56 font-bold opacity-0 md:text-lg md:bottom-48 md:rotate-0 md:left-6 ${isActive === "circle1" ? "text-red-700" : "text-black"}`}>
+            SMAN <span className="block md:inline">97 Jakarta</span>
+          </p>
+          <p className={`univ absolute text-center left-14 bottom-64 md:left-36 md:bottom-72 font-bold opacity-0 text-xs md:text-lg md:rotate-0 ${isActive === "circle2" ? "text-red-700" : "text-black"}`}>
+            Universitas <span className="block md:inline">Gunadarma</span>
+          </p>
+          <p className={`magang1 absolute right-16 md:right-64 top-28 md:top-16 pr-2 font-bold opacity-0 text-xs md:text-lg ${isActive === "circle3" ? "text-red-700" : "text-black"}`}>Hashmicro</p>
+          <p className={`magang2 absolute text-center right-2 md:right-2 top-16 md:top-16 font-bold opacity-0 text-xs md:text-lg ${isActive === "circle4" ? "text-red-700" : "text-black"}`}>
+            Transretail <span className="block md:inline">Indonesia</span>
+          </p>
+          <h2 className="experience absolute font-soehne left-6 top-6 font-bold opacity-0 md:text-2xl">Experience</h2>
+          <div className="experience-information absolute right-6 bottom-6 h-2/5 md:h-2/4 w-3/5 md:w-2/5 border-2 border-black rounded-tl-3xl rounded-br-3xl p-3">
             <Suspense fallback={<h2>Loading Data</h2>}>
               <Await resolve={props.experiences}>{JourneyInformation}</Await>
             </Suspense>

@@ -5,7 +5,7 @@ import Header from "./Header";
 export default function Layout() {
   return (
     <>
-      <div className="site-wrapper px-32">
+      <div className="site-wrapper px-10 md:px-32">
         <Header />
         <main>
           <Outlet />
