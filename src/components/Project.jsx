@@ -37,7 +37,7 @@ export default function Project(props) {
     if (isMobile) {
       rangeTranslateX = "-505vw";
     } else {
-      rangeTranslateX = "-205vw";
+      rangeTranslateX = "-2800px";
     }
 
     const pin = gsap.fromTo(

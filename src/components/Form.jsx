@@ -23,7 +23,7 @@ export default function Form() {
       },
     });
 
-    tl_form.fromTo(".form", { y: "-120vh", opacity: 0 }, { y: "-120vh", opacity: 1 }).fromTo(".form", { y: "-120vh", opacity: 1 }, { y: "-115vh" }).fromTo(".technology", { y: 0 }, { y: "-100vh" }).to(".form", { opacity: 1 });
+    tl_form.fromTo(".form", { y: "-120vh", opacity: 0 }, { y: "-120vh", opacity: 1 }).fromTo(".form", { y: "-120vh", opacity: 1 }, { y: "-115vh" }).fromTo(".technology", { y: 0 }, { y: "-1000px" }).to(".form", { opacity: 1 });
   });
 
   return (
