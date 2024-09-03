@@ -580,6 +580,10 @@
       padding: 26px;
     }
 
+    .form{
+      height: 120vh;
+    }
+
     .btn-form:before {
       content: "";
     }
