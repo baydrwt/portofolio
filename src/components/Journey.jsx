@@ -63,7 +63,7 @@ export default function Journey(props) {
     if (isMobile) {
       boxTimelineJourney = { y: -150, width: "95%", height: "75%", ease: "slow(0.5, 0.8, true)" };
     } else {
-      boxTimelineJourney = { y: -220, width: "75%", height: "75%", x: -140, ease: "slow(0.5, 0.8, true)" };
+      boxTimelineJourney = { y: -220, width: "75%", marginLeft: "28px", height: "75%", x: -140, ease: "slow(0.5, 0.8, true)" };
     }
     tl.fromTo(".box-journey", { y: -150 }, boxTimelineJourney).fromTo(".experience-information", { x: 55, opacity: 0 }, { opacity: 1, duration: 0.2, x: 0, ease: "slow(0.5, 0.8, true)" });
   });

@@ -19,16 +19,16 @@ export default function Form() {
         end: "bottom -80%",
         pin: true,
         scrub: 1,
-        // markers: true,
+        markers: true,
       },
     });
 
-    tl_form.fromTo(".form", { y: "-120vh", opacity: 0 }, { y: "-120vh", opacity: 1 }).fromTo(".form", { y: "-120vh", opacity: 1 }, { y: "-115vh" }).fromTo(".technology", { y: 0 }, { y: "-1000px" }).to(".form", { opacity: 1 });
+    tl_form.fromTo(".form", { y: "-135vh", opacity: 0 }, { y: "-135vh", opacity: 1 }).fromTo(".form", { y: "-135vh", opacity: 1 }, { y: "-133vh" }).fromTo(".technology", { y: 0 }, { y: "-110vh" }).to(".form", { opacity: 1 });
   });
 
   return (
-    <section className="form w-full mb-5 px-5 relative overflow-hidden" ref={triggerRef}>
-      <div className="box-form flex justify-between my-10">
+    <section className="form w-full h-full mb-20 px-5 relative overflow-hidden pb-24 pt-24" ref={triggerRef}>
+      <div className="box-form flex justify-between">
         <h2 className="font-soehne text-6xl tracking-wider overflow-hidden">Let's Jam.</h2>
         <Link to="/contact" type="button" className="btn-form font-soehne flex items-center text-2xl border-2 rounded-full gap-3 px-5 py-3 relative overflow-hidden border-black">
           Contact Me
@@ -38,7 +38,7 @@ export default function Form() {
         </Link>
       </div>
       <div className="flex mt-14 mb-28">
-        <div className="border-s-2 border-t-2 border-black w-3/5"></div>
+        <div className="border-s-2 border-t-2 border-black w-3/5 mr-5"></div>
         <div className="ml-auto flex-end">
           <h4 className="font-soehne">I always up for a tea and a chat,</h4>
           <p className="font-soehne">
