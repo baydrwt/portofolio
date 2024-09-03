@@ -27,19 +27,19 @@ export default function Form() {
   });
 
   return (
-    <section className="form w-full h-full mb-10 px-5 relative overflow-hidden pb-36 pt-28" ref={triggerRef}>
+    <section className="form w-full md:h-full mb:mb-10 px-5 relative overflow-hidden md:pb-36 pt-28" ref={triggerRef}>
       <div className="box-form flex justify-between">
-        <h2 className="font-soehne text-6xl tracking-wider overflow-hidden">Let's Jam.</h2>
-        <Link to="/contact" type="button" className="btn-form font-soehne flex items-center text-2xl border-2 rounded-full gap-3 px-5 py-3 relative overflow-hidden border-black">
+        <h2 className="font-soehne text-xl md:text-6xl tracking-wider overflow-hidden">Let's Jam.</h2>
+        <Link to="/contact" type="button" className="btn-form font-soehne flex items-center text-sm md:text-2xl border-2 rounded-full gap-1 md:gap-3 px-3 md:px-5 py-0 md:py-3 relative overflow-hidden border-black">
           Contact Me
-          <span>
+          <span className="hidden md:inline">
             <BsArrowUpRight />
           </span>
         </Link>
       </div>
       <div className="flex mt-14 mb-28">
         <div className="border-s-2 border-t-2 border-black w-3/5 mr-5"></div>
-        <div className="ml-auto flex-end">
+        <div className="ml-auto flex-end text-xs md:text-md">
           <h4 className="font-soehne">I always up for a tea and a chat,</h4>
           <p className="font-soehne">
             <a href="mailto:bayu0825.bd@gmail.com" target="blank_" className="form-email mr-1">
@@ -49,18 +49,18 @@ export default function Form() {
           </p>
         </div>
       </div>
-      <div className="flex border-2 rounded-lg h-2/5">
-        <a href="https://github.com/baydrwt/" target="blank_" className="socmed-box flex flex-col p-8 w-full justify-between border-r-2">
-          <FaGithub className="github text-3xl" />
-          <p className="font-bold tracking-wider font-soehne">GitHub</p>
+      <div className="flex border-2 rounded-lg h-1/4 md:h-2/5">
+        <a href="https://github.com/baydrwt/" target="blank_" className="socmed-box flex flex-col p-1 md:p-8 w-full justify-evenly md:justify-between border-r-2">
+          <FaGithub className="github text-lg ml-1 md:text-3xl" />
+          <p className="font-bold tracking-wider font-soehne text-xs md:text-xl">GitHub</p>
         </a>
-        <a href="https://www.instagram.com/baydrwt/" target="blank_" className="socmed-box flex flex-col p-8 w-full justify-between border-r-2">
-          <FaInstagram className="instagram text-3xl" />
-          <p className="font-bold tracking-wider font-soehne">Instagram</p>
+        <a href="https://www.instagram.com/baydrwt/" target="blank_" className="socmed-box flex flex-col p-1 md:p-8 w-full justify-evenly md:justify-between border-r-2">
+          <FaInstagram className="instagram text-lg ml-1 md:text-3xl" />
+          <p className="font-bold tracking-wider font-soehne text-xs md:text-xl">Instagram</p>
         </a>
-        <a href="https://www.linkedin.com/in/bayu-darwanto/" target="blank_" className="socmed-box flex flex-col p-8 w-full justify-between">
-          <FaLinkedin className="linkedin text-3xl" />
-          <p className="font-bold tracking-wider font-soehne">LinkedIn</p>
+        <a href="https://www.linkedin.com/in/bayu-darwanto/" target="blank_" className="socmed-box flex flex-col p-1 md:p-8 w-full justify-evenly md:justify-between">
+          <FaLinkedin className="linkedin text-lg ml-1 md:text-3xl" />
+          <p className="font-bold tracking-wider font-soehne text-xs md:text-xl">LinkedIn</p>
         </a>
       </div>
     </section>

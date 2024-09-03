@@ -579,5 +579,9 @@
       margin-top: -90px;
       padding: 26px;
     }
+
+    .btn-form:before {
+      content: "";
+    }
   }
 }
