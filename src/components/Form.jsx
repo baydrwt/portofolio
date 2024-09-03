@@ -19,15 +19,15 @@ export default function Form() {
         end: "bottom -80%",
         pin: true,
         scrub: 1,
-        markers: true,
+        // markers: true,
       },
     });
 
-    tl_form.fromTo(".form", { y: "-135vh", opacity: 0 }, { y: "-135vh", opacity: 1 }).fromTo(".form", { y: "-135vh", opacity: 1 }, { y: "-133vh" }).fromTo(".technology", { y: 0 }, { y: "-110vh" }).to(".form", { opacity: 1 });
+    tl_form.fromTo(".form", { y: "-130vh", opacity: 0 }, { y: "-130vh", opacity: 1 }).fromTo(".form", { y: "-130vh", opacity: 1 }, { y: "-125vh" }).fromTo(".technology", { y: 0 }, { y: "-110vh" }).to(".form", { opacity: 1 });
   });
 
   return (
-    <section className="form w-full h-full mb-20 px-5 relative overflow-hidden pb-24 pt-24" ref={triggerRef}>
+    <section className="form w-full h-full mb-10 px-5 relative overflow-hidden pb-36 pt-28" ref={triggerRef}>
       <div className="box-form flex justify-between">
         <h2 className="font-soehne text-6xl tracking-wider overflow-hidden">Let's Jam.</h2>
         <Link to="/contact" type="button" className="btn-form font-soehne flex items-center text-2xl border-2 rounded-full gap-3 px-5 py-3 relative overflow-hidden border-black">
