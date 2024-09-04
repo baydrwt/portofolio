@@ -15,7 +15,7 @@ export default function Friend() {
   function cardFriends(friends) {
     const cardEl = friends.map((friend) => {
       return (
-        <div className="card-friend border h-3/5 md:h-4/5 border-black p-3 flex items-center justify-between">
+        <div className="card-friend border h-4/5 md:h-4/5 border-black p-3 flex items-center justify-between">
           <div className="main-info w-1/2 h-2/3 flex items-center flex-col justify-center mr-4 text-xs md:text-sm text-center">
             <h2 className="font-soehne uppercase">{friend.name}</h2>
             <h3 className="">{friend.position}</h3>
@@ -43,7 +43,7 @@ export default function Friend() {
   return (
     <div className="h-screen w-full flex flex-col mt-28 md:justify-center md:mt-0">
       <h2 className="font-soehne text-xl md:text-2xl">Friends & Collaborators : Check this out 🚀</h2>
-      <div className="box-friends grid md:grid-cols-3 gap-5 w-full h-2/4 my-7">
+      <div className="box-friends grid md:grid-cols-3 md:gap-5 w-full h-2/4 my-7">
         <Suspense
           fallback={
             <h2 className="h-screen w-full">
