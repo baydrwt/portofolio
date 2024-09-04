@@ -21,7 +21,7 @@ export default function Friend() {
             <h3 className="">{friend.position}</h3>
           </div>
           <span className="border border-black h-3/4"></span>
-          <div className="w-1/2 text-center flex flex-col gap-1 text-sm md:text-md">
+          <div className="w-1/2 text-center flex flex-col gap-1 text-sm md:text-base">
             <a href={friend.instagram} target="blank_" className="flex items-center gap-2 ml-5 font-sans text-black">
               <FaInstagram className="link-logo cursor-pointer" />
               <span className="link relative cursor-pointer">Instagram</span>

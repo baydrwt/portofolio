@@ -20,12 +20,15 @@ export default function Journey(props) {
 
     return (
       <>
-        <h3 className="font-soehne text-sm md:text-md">{experience.position}</h3>
-        <h4 className="text-xs md:text-sm font-extralight italic pb-2 mb-2 border-b-2 flex items-center">
+        <h3 className="font-soehne text-sm md:text-base">{experience.position}</h3>
+        <h4 className="text-xs md:text-sm font-extralight pb-2 mb-2 border-b-2 flex items-center">
           <a href={`${experience.profile}`} target="blank_" className="pr-1">
             <FaLinkedin />
           </a>
-          | {experience.date_start} - {experience.date_end}
+          |
+          <span className="ml-1 italic">
+            {experience.date_start} - {experience.date_end}
+          </span>
         </h4>
         <p className="text-xs md:text-sm text-justify">{experience.description}</p>
       </>
@@ -95,11 +98,11 @@ export default function Journey(props) {
               onClick={(e) => handleClick(e)}
             />
           </svg>
-          <p className={`sman absolute text-center left-1 text-xs top-36 font-bold opacity-0 md:text-lg md:top-48 md:rotate-0 md:left-6 ${isActive === "circle1" ? "text-red-700" : "text-black"}`}>
-            SMAN <span className="block md:inline">97 Jakarta</span>
+          <p className={`sman absolute text-center left-1 text-xs top-40 font-bold opacity-0 md:text-lg md:top-48 md:rotate-0 md:left-6 ${isActive === "circle1" ? "text-red-700" : "text-black"}`}>
+            97 Jakarta<span className="block md:inline"> SHS</span>
           </p>
           <p className={`univ absolute text-center left-14 top-28 md:left-36 md:top-32 font-bold opacity-0 text-xs md:text-lg md:rotate-0 ${isActive === "circle2" ? "text-red-700" : "text-black"}`}>
-            Universitas <span className="block md:inline">Gunadarma</span>
+            University of <span className="block md:inline">Gunadarma</span>
           </p>
           <p className={`magang1 absolute right-16 md:right-64 top-24 md:top-16 pr-2 font-bold opacity-0 text-xs md:text-lg ${isActive === "circle3" ? "text-red-700" : "text-black"}`}>Hashmicro</p>
           <p className={`magang2 absolute text-center right-2 md:right-2 top-16 md:top-16 font-bold opacity-0 text-xs md:text-lg ${isActive === "circle4" ? "text-red-700" : "text-black"}`}>

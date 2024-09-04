@@ -14,17 +14,14 @@ export default function About() {
           <div className="front z-10 flex items-center">
             <img src="/image/about/bayu.webp" alt="bayu_darwanto" className="w-full h-full object-cover shadow-lg z-50" />
           </div>
-          <div className="back z-10">
-            <p className="z-10 font-sans">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur similique perspiciatis voluptatem, sit corporis unde nesciunt cum hic neque animi sequi, consequuntur, quasi tenetur aperiam harum blanditiis? Atque quo
-              excepturi vel quis rem ab, officiis doloribus inventore reprehenderit et
-            </p>
+          <div className="back z-10 text-center flex items-center justify-center">
+            <p className="font-orbitron text-xl md:text-3xl h-1/2 -rotate-12 flex items-center justify-center">25/11/01</p>
           </div>
         </ReactCardFlip>
       </div>
       <div className="description font-soehne text-justify md:w-3/4 flex flex-col gap-3 md:gap-5">
         <h1 className="md:text-2xl text-center md:text-start">Bayu Darwanto | 22 Years Old.</h1>
-        <h2 className="md:text-md text-xs">
+        <h2 className="text-xs md:text-base">
           I am a graduate of University of Gunadarma with a degree in Informatics, achieving a GPA of 3.84. I have a strong interest in website development, particularly in frontend development. Throughout my studies, I gained significant
           programming experience, especially in web development. I also completed internships as a Web Developer at Hashmicro through the MSIB Kampus Merdeka program and as a Software Developer at Transretail Indonesia. During these
           internships, I successfully completed all assigned tasks within the specified deadlines.

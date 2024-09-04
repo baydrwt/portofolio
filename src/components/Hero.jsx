@@ -58,7 +58,7 @@ export default function Hero() {
 
   return (
     <section className="hero w-screen h-screen flex flex-col justify-center items-center" ref={main}>
-      <div className="text overflow-hidden flex text-lg font-soehne leading-normal sm:text-md md:text-2xl">
+      <div className="text overflow-hidden flex text-lg font-soehne leading-normal sm:text-base md:text-2xl">
         <p className="concept z-10">from concept</p>
         <p className="code z-0 pl-2">to {code}</p>
       </div>

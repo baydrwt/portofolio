@@ -601,5 +601,9 @@
     .socmed-box:nth-child(3):hover .linkedin {
       scale: 1.2;
     }
+
+    .back {
+      height: 147px;
+    }
   }
 }
