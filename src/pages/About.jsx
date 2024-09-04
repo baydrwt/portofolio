@@ -14,7 +14,7 @@ export default function About() {
           <div className="front z-10 flex items-center">
             <img src="/image/about/bayu.webp" alt="bayu_darwanto" className="w-full h-full object-cover shadow-lg z-50" />
           </div>
-          <div className="back z-10 text-center flex items-center justify-center">
+          <div className="back z-10 text-center flex items-center justify-center border border-black">
             <p className="font-orbitron text-xl md:text-3xl h-1/2 -rotate-12 flex items-center justify-center">25/11/01</p>
           </div>
         </ReactCardFlip>
