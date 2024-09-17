@@ -5,8 +5,22 @@ import Loader from "../components/Loader";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import MiniGames from "../components/MiniGames";
 
 gsap.registerPlugin(ScrollTrigger);
+
+const MINI_GAMES = [
+  {
+    title: "Tenzien Games",
+    url: "https://gamesoftenzien.netlify.app/",
+    description: "Tenzien is a relaxing dice game where players roll to match dice to a target number. Easy to play and perfect for unwinding at your own pace!",
+  },
+  {
+    title: "Tic Tac Toe",
+    url: "https://tictactoe-react-uc.netlify.app/",
+    description: "Tic Tac Toe is a simple and classic game where two players take turns marking X and O on a 3x3 grid. The goal is to get three in a row, either horizontally, vertically, or diagonally.",
+  },
+];
 
 export default function Contact() {
   const [loading, setLoading] = useState(false);
@@ -27,12 +41,10 @@ export default function Contact() {
       })
       .then(
         () => {
-          console.log("SUCCESS!");
           setLoading(false);
           e.target.reset();
         },
         (error) => {
-          console.log("FAILED...", error.text);
           setLoading(false);
         }
       );
@@ -213,11 +225,13 @@ export default function Contact() {
               </div>
             </div>
           </div>
-          <div className="border-2 border-black h-3/5 rounded-xl p-3 text-justify">
-            <p>
-              <span className="ml-10">Lorem ipsum dolor sit amet consectetur adipisicing elit.</span> Dignissimos inventore qui autem dolore ullam quidem animi? Ducimus ratione inventore dignissimos sed, saepe ex neque nisi voluptate
-              aperiam explicabo ipsum mollitia eum nam laborum animi minima iusto esse alias. Cum non quos laboriosam quas eligendi ipsa dolor quisquam minus delectus asperiores?
-            </p>
+          <div className="border-2 border-black h-3/5 rounded-xl p-5 text-justify">
+            <h3 className="font-soehne text-base mb-5">Mini Games That I Developed</h3>
+            <div className="flex flex-col gap-3">
+              {MINI_GAMES.map((miniGame) => {
+                return <MiniGames key={miniGame.title} {...miniGame} />;
+              })}
+            </div>
           </div>
         </div>
       </div>

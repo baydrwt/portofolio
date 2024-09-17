@@ -279,9 +279,14 @@
     letter-spacing: 0.5px;
   }
 
+  .text-animation {
+    position: relative;
+  }
+
   .form-email:before,
   .home-link:before,
-  .link:before {
+  .link:before,
+  .text-animation:before {
     content: "";
     border-bottom: 1px solid black;
     width: 0%;
@@ -293,7 +298,8 @@
 
   .form-email:hover:before,
   .home-link:hover:before,
-  .link:hover:before {
+  .link:hover:before,
+  .text-animation:hover:before {
     width: 100%;
   }
 
