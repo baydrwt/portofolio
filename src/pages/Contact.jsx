@@ -20,6 +20,12 @@ const MINI_GAMES = [
     url: "https://tictactoe-react-uc.netlify.app/",
     description: "Tic Tac Toe is a simple and classic game where two players take turns marking X and O on a 3x3 grid. The goal is to get three in a row, either horizontally, vertically, or diagonally.",
   },
+  {
+    title: "Reaction Games",
+    url: "https://reactiongames-uc.netlify.app/",
+    description:
+      "Reaction games are fast-paced challenges that test your reflexes. Players must quickly respond before target time is end, and achieve high scores by time remaining. These games offer simple yet engaging gameplay, ideal for improving focus and reaction speed.",
+  },
 ];
 
 export default function Contact() {
