@@ -5,6 +5,7 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { FaCloudDownloadAlt } from "react-icons/fa";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { trackButton } from "../api.js";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -75,6 +76,7 @@ export default function Hero() {
         download="CV BAYU DARWANTO.pdf"
         type="button"
         className="btn-download flex items-center text-xs gap-2 bg-transparent mt-5 py-3 px-3 rounded-3xl text-black border-2 border-slate-950 font-soehne tracking-widest opacity-0 md:px-10 md:gap-5 md:text-lg hover:cursor-pointer"
+        onClick={() => trackButton()}
       >
         <FaCloudDownloadAlt className="text-xl md:text-3xl" />{" "}
         <span className="btn-text" id="cvButton">

@@ -12,7 +12,6 @@ const firebaseConfig = {
   measurementId: import.meta.env.VITE_MEASUREMENT_ID,
 };
 
-// const analytics = getAnalytics(app);
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 const analytics = getAnalytics(app);
@@ -45,10 +44,8 @@ export async function getFriends() {
   return dataArr;
 }
 
-const button = document.getElementById("cvButton");
-
-button.addEventListener("click", () => {
+export function trackButton() {
   logEvent(analytics, "cv_download", {
     button_name: "cvButton",
   });
-});
+}
