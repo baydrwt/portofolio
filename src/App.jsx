@@ -24,24 +24,6 @@ const router = createBrowserRouter(
 );
 
 function App() {
-  // useEffect(() => {
-  //   const smoothScroll = (event) => {
-  //     event.preventDefault();
-
-  //     const delta = Math.sign(event.deltaY);
-  //     const scrollAmount = 80;
-
-  //     window.scrollBy({
-  //       top: delta * scrollAmount,
-  //       behavior: "smooth",
-  //     });
-  //   };
-
-  //   window.addEventListener("wheel", smoothScroll, { passive: false });
-
-  //   return () => window.removeEventListener("wheel", smoothScroll);
-  // }, []);
-
   return <RouterProvider router={router} />;
 }
 

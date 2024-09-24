@@ -44,3 +44,11 @@ export async function getFriends() {
   const dataArr = querySnapshot.docs.map((doc) => ({ ...doc.data(), id: doc.id }));
   return dataArr;
 }
+
+const button = document.getElementById("cvButton");
+
+button.addEventListener("click", () => {
+  logEvent(analytics, "cv_download", {
+    button_name: "cvButton",
+  });
+});

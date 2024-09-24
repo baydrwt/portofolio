@@ -76,7 +76,10 @@ export default function Hero() {
         type="button"
         className="btn-download flex items-center text-xs gap-2 bg-transparent mt-5 py-3 px-3 rounded-3xl text-black border-2 border-slate-950 font-soehne tracking-widest opacity-0 md:px-10 md:gap-5 md:text-lg hover:cursor-pointer"
       >
-        <FaCloudDownloadAlt className="text-xl md:text-3xl" /> <span className="btn-text">Download Resume</span>
+        <FaCloudDownloadAlt className="text-xl md:text-3xl" />{" "}
+        <span className="btn-text" id="cvButton">
+          Download Resume
+        </span>
       </a>
     </section>
   );
