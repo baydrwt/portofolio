@@ -226,7 +226,7 @@
   }
 
   .btn-form:before {
-    content: "\2197";
+    content: "";
     font-size: 35px;
     position: absolute;
     bottom: -100%;
