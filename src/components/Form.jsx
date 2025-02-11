@@ -38,9 +38,7 @@ export default function Form() {
         <h2 className="font-soehne text-xl md:text-6xl tracking-wider overflow-hidden">Let's Jam.</h2>
         <Link to="/contact" type="button" className="btn-form font-soehne flex items-center text-sm md:text-2xl border-2 rounded-full gap-1 md:gap-3 px-3 md:px-5 py-0 md:py-3 relative overflow-hidden border-black">
           Contact Me
-          <span className="hidden md:inline">
             <BsArrowUpRight />
-          </span>
         </Link>
       </div>
       <div className="flex mt-7 mb-28">
